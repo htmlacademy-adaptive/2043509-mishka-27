@@ -1,26 +1,17 @@
 @font-face {
-  font-family: "Oswald";
+  font-family: "Opensans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2"),
-    url("../fonts/oswald/oswaldregular.woff") format("woff");
+  src: url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Oswald";
+  font-family: "Opensans";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-display: swap;
-  src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2"),
-    url("../fonts/oswald/oswaldmedium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2"),
-    url("../fonts/lato/Lato-Regular.woff") format("woff");
+  src: url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
 }

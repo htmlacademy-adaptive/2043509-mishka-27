@@ -1,8 +1,6 @@
-@use "../global/bootstrap.scss";
-
 .button {
-  font-family: bootstrap.$font-oswald;
-  background-color: bootstrap.$color-green;
+  font-family: $font-opensans;
+  background-color: $color-green;
   padding: 10px 10px 10px 10px;
   color: #ffffff;
   font-size: 14px;
@@ -17,7 +15,7 @@
   cursor: pointer;
   border: none;
 
-  @include bootstrap.tablet {
+  @include tablet {
     font-size: 20px;
     line-height: 20px;
   }

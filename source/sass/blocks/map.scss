@@ -1,37 +1,35 @@
-@use "../global/bootstrap.scss";
-
 .map {
   position: relative;
   display: grid;
 
-  @include bootstrap.desktop {
+  @include desktop {
     grid-template-columns: 1fr minmax(1024px, 1440px) 1fr;
   }
 }
 
 .map--not-index {
   & .map__contacts {
-    background-color: bootstrap.$color-grey;
+    background-color: $color-grey;
 
-    @include bootstrap.desktop {
+    @include desktop {
       background-color: #ffffff;
     }
   }
 
   & .contacts {
-    @include bootstrap.desktop {
+    @include desktop {
       padding: 59px 109px 44px 80px;
     }
   }
 
   & .contacts__address {
-    @include bootstrap.desktop {
+    @include desktop {
       max-width: 126px;
     }
   }
 
   & .contacts__street {
-    @include bootstrap.desktop {
+    @include desktop {
       margin-bottom: 0;
     }
   }
@@ -50,7 +48,7 @@
   object-fit: cover;
 
 
-  @include bootstrap.tablet {
+  @include tablet {
     min-height: 400px;
   }
 }
@@ -64,13 +62,13 @@
   position: relative;
   overflow: hidden;
 
-  @include bootstrap.tablet {
+  @include tablet {
     height: 400px;
   }
 }
 
 .map__contacts-wrapper {
-  @include bootstrap.desktop {
+  @include desktop {
     grid-column: 2/3;
     grid-row: 2/4;
     z-index: 5;
@@ -83,7 +81,7 @@
 }
 
 .map__contacts {
-  @include bootstrap.desktop {
+  @include desktop {
     max-width: 565px;
     background-color: #ffffff;
     margin: 95px 0 107px 7.64%;

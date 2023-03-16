@@ -1,5 +1,3 @@
-@use "../global/bootstrap.scss";
-
 .page-body {
   color: #000000;
   background-color: #ffffff;
@@ -15,7 +13,7 @@
   position: relative;
   width: 100%;
 
-  @include bootstrap.desktop {
+  @include desktop {
     &::before {
       position: absolute;
       content: "";

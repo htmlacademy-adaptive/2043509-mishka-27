@@ -1,5 +1,3 @@
-@use "../global/bootstrap.scss";
-
 .socials {
   padding: 0;
   margin: 0;
@@ -21,7 +19,7 @@
   color: #666666;
 
   &:hover {
-    color: bootstrap.$color-green;
+    color: $color-green;
   }
 
   &:active {

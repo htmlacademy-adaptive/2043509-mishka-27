@@ -1,9 +1,7 @@
-@use "../global/bootstrap.scss";
-
 .pop-up-menu {
   display: none;
 
-  @include bootstrap.tablet {
+  @include tablet {
     display: flex;
     width: 100%;
   }
@@ -17,7 +15,7 @@
   width: 100%;
   left: 0;
 
-  @include bootstrap.tablet {
+  @include tablet {
     z-index: 0;
     position: static;
   }
@@ -29,7 +27,7 @@
   align-items: center;
   width: 100%;
 
-  @include bootstrap.tablet {
+  @include tablet {
     padding-top: 0;
   }
 }
@@ -47,7 +45,7 @@
   background-image: url("../img/svg/icon-cross.svg");
   cursor: pointer;
 
-  @include bootstrap.tablet {
+  @include tablet {
     display: none;
   }
 

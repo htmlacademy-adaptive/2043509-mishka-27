@@ -1,18 +1,16 @@
-@use "../global/bootstrap.scss";
-
 .main-footer {
-  background-color: bootstrap.$color-grey;
+  background-color: $color-grey;
   margin-top: auto;
   padding-top: 40px;
   padding-bottom: 40px;
   width: 100%;
 
-  @include bootstrap.tablet {
+  @include tablet {
     padding-top: 55px;
     padding-bottom: 55px;
   }
 
-  @include bootstrap.desktop {
+  @include desktop {
     padding-top: 66px;
     padding-bottom: 66px;
   }
@@ -24,7 +22,7 @@
   margin: 0 auto;
   width: 100%;
 
-  @include bootstrap.tablet {
+  @include tablet {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -48,7 +46,7 @@
     color: #6b6b6b;
   }
 
-  @include bootstrap.tablet {
+  @include tablet {
     width: initial;
     border-bottom: none;
     padding: 0;
@@ -70,7 +68,7 @@
   border-bottom: 1px solid #d9d9d9;
   margin-bottom: 20px;
 
-  @include bootstrap.tablet {
+  @include tablet {
     width: initial;
     border-bottom: none;
     padding: 0;
@@ -90,7 +88,7 @@
     fill: #666666;
   }
 
-  @include bootstrap.tablet {
+  @include tablet {
     width: 168px;
   }
 
@@ -111,6 +109,6 @@
   font-size: 16px;
   line-height: 19px;
   color: #444444;
-  font-family: bootstrap.$font-lato;
+  font-family: $font-opensans;
   padding-top: 8px;
 }
