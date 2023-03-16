@@ -56,17 +56,25 @@
 .header-main__logo {
   position: relative;
   text-decoration: none;
-  color: #111111;
-  padding: 23px 0 24px 90px;
+  padding: 0;
   display: flex;
   align-items: center;
+  width: 86px;
+  height: 35px;
+  background-image: url("../img/svg/logo-mobile.svg");
+  background-repeat: no-repeat;
 
   @include tablet {
-    padding: 19px 0 24px 72px;
+    width: 113px;
+    height: 46px;
+    top: 0;
+    background-image: url("../img/svg/logo-tablet.svg");
   }
 
   @include desktop {
-    padding: 23px 0 18px 84px;
+    width: 149px;
+    height: 72px;
+    background-image: url("../img/svg/logo-desktop.svg");
   }
 
   &:hover {
@@ -75,30 +83,6 @@
 
   &:active {
     opacity: 0.6;
-  }
-}
-
-.header-main__logo::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 34px;
-  height: 38px;
-  background-image: url("../img/svg/logo-mobile.svg");
-  background-repeat: no-repeat;
-
-  @include tablet {
-    width: 60px;
-    height: 50px;
-    top: 0;
-    background-image: url("../img/svg/logo-tablet.svg");
-  }
-
-  @include desktop {
-    width: 70px;
-    height: 60px;
-    background-image: url("../img/svg/logo-desktop.svg");
   }
 }
 

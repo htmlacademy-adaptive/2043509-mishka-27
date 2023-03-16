@@ -16,10 +16,10 @@
   text-decoration: none;
   justify-content: center;
   align-items: center;
-  color: #666666;
+  color: $color-black-icons;
 
   &:hover {
-    color: $color-green;
+    color: $color-green-darker;
   }
 
   &:active {

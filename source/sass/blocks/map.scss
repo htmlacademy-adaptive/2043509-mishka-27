@@ -9,7 +9,7 @@
 
 .map--not-index {
   & .map__contacts {
-    background-color: $color-grey;
+    background-color: $color-gray-back;
 
     @include desktop {
       background-color: #ffffff;
