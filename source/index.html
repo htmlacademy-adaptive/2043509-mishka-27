@@ -23,15 +23,30 @@
     <!-- При отключенном js отображается меню мобильной версии в потоке за счет модификатора no-js -->
     <nav class="main-nav">
       <div class="main-nav__wrapper pop-up-menu pop-up-menu--no-js">
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--main-nav">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--index-desktop main-nav__link--current" href="#">Главная</a>
+            <a class="main-nav__link" href="catalog.html">Каталог
+              товаров</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--index-desktop" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link" href="#">Вязание на заказ</a>
           </li>
-          <li class="main-nav__item main-nav__item--margin-left">
-            <a class="main-nav__link main-nav__link--index-desktop" href="form.html">Подбор программы</a>
+        </ul>
+        <ul class="main-nav__list main-nav__list--site-nav">
+          <li class="main-nav__item  main-nav__item--search">
+            <a class="main-nav__link" href="#" aria-label="Поиск по сайту.">
+              <svg class="main-nav__icon-img" width="18" height="18" role="img" focusable="false">
+                <use href="./img/svg/sprite.svg#icon-search"></use>
+              </svg>
+              <span class="main-nav__link-text">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="main-nav__item main-nav__item--cart">
+            <a class="main-nav__link main-nav__link--index-desktop" href="#" aria-label="Корзина товаров.">
+              <svg class="main-nav__icon-img" width="21" height="18" role="img" focusable="false">
+                <use href="./img/svg/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="main-nav__link-text">Корзина: пока пуста</span></a>
           </li>
         </ul>
       </div>

@@ -1,13 +1,13 @@
 .main-footer {
   background-color: $color-gray-back;
   margin-top: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 0;
+  padding-bottom: 23px;
   width: 100%;
 
   @include tablet {
-    padding-top: 55px;
-    padding-bottom: 55px;
+    padding-top: 51px;
+    padding-bottom: 58px;
   }
 
   @include desktop {
@@ -38,11 +38,11 @@
   padding-bottom: 20px;
 
   &:hover {
-   color: $color-green-darker;
+    color: $color-green-darker;
   }
 
   &:active {
-   opacity: 0.3;
+    opacity: 0.3;
   }
 
   @include tablet {
@@ -51,11 +51,6 @@
     border-bottom: none;
     padding: 0;
     margin-top: 5px;
-
-    & .main-footer__logo-img {
-      width: 143px;
-      height: 26px;
-    }
   }
 }
 
@@ -86,7 +81,7 @@
   margin: 0 auto;
 
   @include tablet {
-  margin: 0;
+    margin: 0;
   }
 
   & .main-footer__copyrights-logo-img {
@@ -111,6 +106,6 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
-   font-family: $font-opensans;
+  font-family: $font-opensans;
   padding-top: 8px;
 }
