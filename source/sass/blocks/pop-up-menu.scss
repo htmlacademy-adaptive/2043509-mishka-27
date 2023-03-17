@@ -8,13 +8,24 @@
     width: 100%;
   }
 
+  @include desktop {
+    grid-template-columns: 450px 1fr 400px;
+  }
+
   &::before {
     content: "";
+    width: 100%;
 
     @include tablet {
       grid-column: 1/2;
       grid-row: span 1;
       padding-left: 50px;
+    }
+
+    @include desktop {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      padding-left: 0;
     }
   }
 }
@@ -30,6 +41,7 @@
   @include tablet {
     z-index: 0;
     position: static;
+    display: grid;
   }
 }
 

@@ -1,35 +1,6 @@
 .header-main {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 100%;
-  background-color: transparent;
-
-  @include tablet {
-    padding-top: 0;
-    padding-bottom: 0;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  @include desktop {
-    padding-top: 52px;
-    padding-bottom: 29px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    position: relative;
-    z-index: 5;
-    align-items: start;
-  }
-
-  &--not-index {
-    border-bottom: 1px solid #ebebeb;
-
-    @include tablet {
-      border-bottom: none;
-    }
-  }
+  max-width: 1150px;
+  margin: 0 auto;
 
   &--no-js {
     &.container {
@@ -54,6 +25,39 @@
     position: absolute;
     left: 50px;
   }
+
+  @include desktop {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 9px;
+    padding-bottom: 7px;
+  }
+}
+
+// .header-main__logo-wrapper::after {
+//   position: absolute;
+//   content: "";
+//   width: 500vw;
+//   height: 1px;
+//   bottom: 0;
+//   background-color: rgba(0, 0, 0, 0.1);
+// }
+
+.header-main__decor-wrapper {
+  position: absolute;
+  width: 100%;
+  min-height: 88px;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 500vw;
+    height: 1px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 5;
+  }
 }
 
 .header-main__logo {
@@ -63,6 +67,7 @@
   height: 35px;
   background-image: url("../img/svg/logo-mobile.svg");
   background-repeat: no-repeat;
+  z-index: 5;
 
   @include tablet {
     width: 113px;
