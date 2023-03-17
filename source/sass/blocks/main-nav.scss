@@ -3,7 +3,7 @@
   background-color: transparent;
 
   @include tablet {
-    padding-top: 9px;
+    width: 100%;
   }
 
   @include desktop {
@@ -20,15 +20,45 @@
   width: 100%;
 
   @include tablet {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 500px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &--main-nav {
+      padding-left: 50px;
+    }
+
+    &--site-nav {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      grid-template-columns: 84px 1fr;
+      padding-right: 50px;
+    }
   }
 
   @include desktop {
     background-color: transparent;
     max-width: 100%;
+  }
+}
+
+.main-nav__list--customer-nav {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.main-nav__delivery {
+  color: $color-black-444;
+  display: none;
+  font-family: $font-opensans;
+  font-size: 15px;
+  line-height: 24px;
+
+  @include tablet {
+    display: block;
+    padding-right: 50px;
   }
 }
 
@@ -40,26 +70,34 @@
 
   @include tablet {
     box-shadow: none;
-    margin-left: 34px;
-    max-width: 170px;
 
-    &:last-child {
-      margin-left: 37px;
+    .main-nav__list--site-nav & {
+      min-height: 88px;
     }
   }
+}
 
-  @include desktop {
-    &:last-child {
-      margin-left: 33px;
+.main-nav__item--search {
+  @include tablet {
+    width: 84px;
+    box-shadow: 1px 0 0 rgba(0, 0, 0, 0.1), inset 1px 0 0 rgba(0, 0, 0, 0.1);
+    & .main-nav__link-text {
+      display: none;
+    }
+
+    & .main-nav__link {
+      width: 84px;
+      display: flex;
+      justify-content: center;
     }
   }
 }
 
 .main-nav__link {
   display: flex;
-  justify-content: center;
+  width: 100%;
   align-items: center;
-  padding: 22px 0 24px 0;
+  padding: 28px 0 27px 76px;
   color: $color-black-000;
   font-family: $font-opensans;
   font-size: 17px;
@@ -68,9 +106,8 @@
   text-decoration: none;
 
   @include tablet {
-    font-size: 18px;
-    line-height: 24px;
-    padding: 9px 0 10px 0;
+    padding-left: 0;
+    font-size: 15px;
   }
 
   @include desktop {
@@ -81,6 +118,10 @@
 
   & .main-nav__icon-img {
     opacity: 0.2;
+  }
+
+  .main-nav__list--site-nav & {
+    padding-left: 0;
   }
 }
 
@@ -112,7 +153,8 @@
   }
 }
 
-.main-nav__link:hover {
+.main-nav__icon-img {
+  width: 76px;
 }
 
 .main-nav__wrapper {

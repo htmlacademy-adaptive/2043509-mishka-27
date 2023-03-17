@@ -2,8 +2,20 @@
   display: none;
 
   @include tablet {
-    display: flex;
+    display: grid;
+    grid-template-columns: 48% 52%;
+    grid-auto-flow: dense;
     width: 100%;
+  }
+
+  &::before {
+    content: "";
+
+    @include tablet {
+      grid-column: 1/2;
+      grid-row: span 1;
+      padding-left: 50px;
+    }
   }
 }
 
