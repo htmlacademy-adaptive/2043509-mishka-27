@@ -45,14 +45,17 @@
   }
 }
 
-.pop-up-menu--no-js {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+.pop-up-menu {
+  .no-js & {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 
-  @include tablet {
-    padding-top: 0;
+    @include tablet {
+      padding-top: 0;
+      display: grid;
+    }
   }
 }
 

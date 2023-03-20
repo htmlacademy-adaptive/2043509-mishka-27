@@ -15,59 +15,82 @@
 </head>
 
 <body class="page-body">
-  <div class="page-body__header-wraper">
-    <header class="header-main header-main--no-js">
-      <div class="header-main__logo-wrapper">
-        <a class="header-main__logo" href="index.html" aria-label="Логотип сайта Мишка, преход на главную страницу.">
-        </a>
+  <!-- При отключенном js отображается меню мобильной версии в потоке за счет модификатора no-js -->
+  <header class="header-main no-js">
+    <div class="header-main__logo-wrapper">
+      <a class="header-main__logo" href="index.html" aria-label="Логотип сайта Мишка, преход на главную страницу.">
+      </a>
+    </div>
+    <nav class="main-nav">
+      <div class="main-nav__wrapper pop-up-menu">
+        <ul class="main-nav__list main-nav__list--main-nav">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог
+              товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list main-nav__list--site-nav">
+          <li class="main-nav__item  main-nav__item--search">
+            <a class="main-nav__link" href="#" aria-label="Поиск по сайту.">
+              <svg class="main-nav__icon-img" width="18" height="18" role="img" focusable="false">
+                <use href="./img/svg/sprite.svg#icon-search"></use>
+              </svg>
+              <span class="main-nav__link-text">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="main-nav__item main-nav__item--cart">
+            <a class="main-nav__link main-nav__link--index-desktop" href="#" aria-label="Корзина товаров.">
+              <svg class="main-nav__icon-img" width="21" height="18" role="img" focusable="false">
+                <use href="./img/svg/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="main-nav__link-text">Корзина: пока пуста</span></a>
+          </li>
+        </ul>
+        <ul class="main-nav__list main-nav__list--customer-nav">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <div class="main-nav__delivery">Бесплатная доставка по России</div>
       </div>
-      <!-- При отключенном js отображается меню мобильной версии в потоке за счет модификатора no-js -->
-      <nav class="main-nav">
-        <div class="main-nav__wrapper pop-up-menu pop-up-menu--no-js">
-          <ul class="main-nav__list main-nav__list--main-nav">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог
-                товаров</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Вязание на заказ</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list main-nav__list--site-nav">
-            <li class="main-nav__item  main-nav__item--search">
-              <a class="main-nav__link" href="#" aria-label="Поиск по сайту.">
-                <svg class="main-nav__icon-img" width="18" height="18" role="img" focusable="false">
-                  <use href="./img/svg/sprite.svg#icon-search"></use>
-                </svg>
-                <span class="main-nav__link-text">Поиск по сайту</span>
-              </a>
-            </li>
-            <li class="main-nav__item main-nav__item--cart">
-              <a class="main-nav__link main-nav__link--index-desktop" href="#" aria-label="Корзина товаров.">
-                <svg class="main-nav__icon-img" width="21" height="18" role="img" focusable="false">
-                  <use href="./img/svg/sprite.svg#icon-cart"></use>
-                </svg>
-                <span class="main-nav__link-text">Корзина: пока пуста</span></a>
-            </li>
-          </ul>
-          <ul class="main-nav__list main-nav__list--customer-nav">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Новые поступления</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Распродажа</a>
-            </li>
-          </ul>
-          <div class="main-nav__delivery">Бесплатная доставка по России</div>
-        </div>
-        <button class="main-nav__toggle main-nav__toggle--close main-nav__toggle--no-js" type="button"
-          aria-label="Открыть/закрыть меню.">
-        </button>
-      </nav>
-    </header>
-    <section class="hero"></section>
-  </div>
+      <button class="main-nav__toggle main-nav__toggle--close" type="button" aria-label="Открыть/закрыть меню.">
+      </button>
+    </nav>
+  </header>
   <main>
+    <section class="promo">
+      <div class="container">
+        <h1 class="promo__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
+        <ul class="promo__categories-list">
+          <li class="promo__categories-item promo__categories-item--interior">
+            <a class="promo__categories-link" href="#">
+              <span class="promo__categories-text">Предметы интерьера</span>
+              <svg class="promo__categories-img" width="40" height="62" role="img" focusable="false">
+                <use href="./img/svg/sprite.svg#interior-decor"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="promo__categories-item promo__categories-item--toys">
+            <a class="promo__categories-link" href="#"><span class="promo__categories-text">Детские игрушки</span>
+              <svg class="promo__categories-img" width="60" height="60" role="img" focusable="false">
+                <use href="./img/svg/sprite.svg#toy-decor"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="top-product">
+      <div class="container">
+        <h2 class="top-product__title">Вязаные корзинки</h2>
+      </div>
+    </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__wrapper container">

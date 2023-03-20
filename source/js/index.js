@@ -2,11 +2,7 @@ const mainNavToggle = document.querySelector('.main-nav__toggle');
 const mainHeader = document.querySelector('.header-main');
 const popUpMenu = document.querySelector('.pop-up-menu');
 
-mainHeader.classList.remove('header-main--no-js')
-
-popUpMenu.classList.remove('pop-up-menu--no-js')
-
-mainNavToggle.classList.remove('main-nav__toggle--no-js')
+mainHeader.classList.remove('no-js')
 
 const togglePopUp = function() {
   mainNavToggle.addEventListener('click', (evt) => {

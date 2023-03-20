@@ -1,0 +1,168 @@
+.promo {
+  position: relative;
+  padding-top: 72px;
+  background-color: #fafafa;
+  border-top: 1px solid $color-gray-lines;
+  z-index: 0;
+  background-image: url("../img/decoration-images/promo-back-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 50% -18px;
+  background-size: contain;
+
+  @include tablet {
+    padding-top: 155px;
+    margin-top: -62px;
+    background-position: 50% -2px;
+    background-image: url("../img/decoration-images/promo-back-tablet@1x.png");
+
+    &::after {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      width: 100%;
+      height: 24px;
+      bottom: 0;
+      left: -4px;
+      background-image: url("../img/svg/waves-white.svg");
+      background-repeat: repeat-x;
+    }
+  }
+
+  @include desktop {
+    padding-top: 157px;
+    background-position: 50% -2px;
+    background-size: 67%;
+
+    &::after {
+      background-image: url("../img/svg/waves-white-desktop.svg");
+      height: 34px;
+      left: -34px;
+    }
+  }
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    @include tablet {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+  }
+}
+
+.promo__title {
+  font-family: $font-opensans;
+  color: $color-black-000;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  max-width: 260px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 120px;
+
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 372px;
+    max-width: 668px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 355px;
+    max-width: 700px;
+  }
+}
+
+.promo__categories-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  background-color: $color-green-basic;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.promo__categories-item {
+  position: relative;
+}
+
+.promo__categories-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 36px 18px 30px;
+  font-family: $font-opensans;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  text-decoration: none;
+  background-color: $color-green-basic;
+  color: #149080;
+  transition: all 0.3s ease;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 25px 36px 43px 36px;
+  }
+
+  @include desktop {
+    padding-bottom: 49px;
+  }
+
+  .promo__categories-item--toys & {
+    padding-right: 27px;
+    background-color: #56c3b2;
+
+    @include tablet {
+      padding-right: 33px;
+    }
+
+    @include desktop {
+      padding-right: 35px;
+    }
+  }
+
+  & .promo__categories-text {
+    color: $color-white;
+    max-width: 130px;
+
+    @include tablet {
+      max-width: 130px;
+    }
+
+    @include desktop {
+      max-width: 130px;
+    }
+  }
+
+  & .promo__categories-img {
+    opacity: 0.5;
+    transform: translateY(4px);
+  }
+}
+
+.promo__categories-link:hover {
+  transform: scaleY(1.05) translateY(-5px);
+
+  & .promo__categories-img {
+    opacity: 0.7;
+  }
+}
+
+.promo__categories-link:active {
+
+  & .promo__categories-img {
+    opacity: 0.3;
+  }
+}

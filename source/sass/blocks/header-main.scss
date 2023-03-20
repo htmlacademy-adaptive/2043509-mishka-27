@@ -1,18 +1,9 @@
 .header-main {
+  width: 100%;
   max-width: 1150px;
   margin: 0 auto;
-
-  &--no-js {
-    &.container {
-      padding-right: 0;
-      padding-left: 0;
-    }
-
-    & .header-main__logo-wrapper {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
+  position: relative;
+  z-index: 2;
 }
 
 .header-main__logo-wrapper {
@@ -42,23 +33,6 @@
 //   bottom: 0;
 //   background-color: rgba(0, 0, 0, 0.1);
 // }
-
-.header-main__decor-wrapper {
-  position: absolute;
-  width: 100%;
-  min-height: 88px;
-  overflow: hidden;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 500vw;
-    height: 1px;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 5;
-  }
-}
 
 .header-main__logo {
   position: relative;
