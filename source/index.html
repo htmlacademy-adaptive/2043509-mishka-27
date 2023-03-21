@@ -128,7 +128,7 @@
           </picture>
           <div class="top-product__price-button-wrapper">
             <span class="top-product__price">Цена: 990&nbsp;руб.</span>
-            <button class="top-product__button button" type="button">Заказать</button>
+            <button class="top-product__button button modal-button" type="button">Заказать</button>
           </div>
         </div>
       </div>
@@ -179,6 +179,32 @@
       </a>
     </div>
   </footer>
+  <div class="modal">
+    <div class="modal__content">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+        <h3 class="modal__subtitle">Выберите размер:</h3>
+        <fieldset class="modal__form-field">
+          <label class="modal__form-control">
+            <input class="modal__form-input visually-hidden" type="radio" name="size" value="small"
+              aria-label="Размер маленький." checked>
+            <span class="modal__form-control-mark">s</span>
+          </label>
+          <label class="modal__form-control">
+            <input class="modal__form-input visually-hidden" type="radio" name="size" value="medium"
+              aria-label="Размер средний.">
+            <span class="modal__form-control-mark">m</span>
+          </label>
+          <label class="modal__form-control">
+            <input class="modal__form-input visually-hidden" type="radio" name="size" value="large"
+              aria-label="Размер большой.">
+            <span class="modal__form-control-mark">l</span>
+          </label>
+        </fieldset>
+        <button class="modal__button button" type="submit">Добавить</button>
+      </form>
+    </div>
+  </div>
   <script src="./js/index.js"></script>
 </body>
 
