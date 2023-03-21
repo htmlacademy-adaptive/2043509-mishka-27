@@ -88,7 +88,49 @@
     </section>
     <section class="top-product">
       <div class="container">
-        <h2 class="top-product__title">Вязаные корзинки</h2>
+        <div class="top-product__title-wrapper">
+          <h2 class="top-product__title">Вязаные корзинки</h2>
+          <span class="top-product__weeks-product-text">Товар недели</span>
+        </div>
+        <div class="top-product__info-wrapper">
+          <p class="top-product__info-text">Экологически чистая пряжа,
+            ручная работа. Доступны в&nbsp;шести расцветках и&nbsp;трёх размерах.</p>
+          <dl class="top-product__details">
+            <div class="top-product__details-wrapper">
+              <dt class="top-product__details-parameter">Цвет:</dt>
+              <dd class="top-product__details-value">тиффани/серый</dd>
+            </div>
+            <div class="top-product__details-wrapper">
+              <dt class="top-product__details-parameter">Диаметр:</dt>
+              <dd class="top-product__details-value">25&nbsp;см</dd>
+            </div>
+            <div class="top-product__details-wrapper">
+              <dt class="top-product__details-parameter">Высота</dt>
+              <dd class="top-product__details-value">15&nbsp;см</dd>
+            </div>
+          </dl>
+        </div>
+        <picture>
+          <source type="image/webp" media="(min-width: 1150px)"
+            srcset="./img/content-images/knitted-baskets-desktop@2x.webp 2x, ./img/content-images/knitted-baskets-desktop@1x.webp 1x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="./img/content-images/knitted-baskets-tablet@2x.webp 2x, ./img/content-images/knitted-baskets-tablet@1x.webp 1x">
+          <source type="image/webp" media="(min-width: 320px)"
+            srcset="./img/content-images/knitted-baskets-mobile@2x.webp 2x, ./img/content-images/knitted-baskets-mobile@1x.webp 1x">
+          <source media="(min-width: 1150px)"
+            srcset="./img/content-images/knitted-baskets-desktop@2x.png 2x, ./img/content-images/knitted-baskets-desktop@1x.png 1x">
+          <source media="(min-width: 768px)"
+            srcset="./img/content-images/knitted-baskets-tablet@2x.png 2x, ./img/content-images/knitted-baskets-tablet@1x.png 1x">
+          <source media="(min-width: 320px)"
+            srcset="./img/content-images/knitted-baskets-mobile@2x.png 2x, ./img/content-images/knitted-baskets-mobile@1x.png 1x">
+          <img class="top-product__image" src="./img/content-images/knitted-baskets-mobile@1x.png"
+            alt="Три разноцветные вязаные корзинки разного размера стопкой лежащие на ладонях." width="260"
+            height="315">
+        </picture>
+        <div class="top-product__price-button-wrapper">
+          <span class="top-product__price">Цена: 990&nbsp;руб.</span>
+          <button class="top-product__button button" type="button">Заказать</button>
+        </div>
       </div>
     </section>
   </main>

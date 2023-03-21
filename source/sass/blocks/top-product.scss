@@ -2,3 +2,81 @@
   padding-top: 31px;
   padding-bottom: 42px;
 }
+
+.top-product__title {
+  font-family: $font-opensans;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0 0 4px 0;
+  color: $color-black-000;
+}
+
+.top-product__weeks-product-text {
+  font-family: $font-opensans;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: $color-green-basic;
+  max-width: 170px;
+  margin-bottom: 17px;
+  display: block;
+}
+
+.top-product__info-text {
+  font-family: $font-opensans;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: $color-black-444;
+  margin: 0 0 28px 0;
+}
+
+.top-product__details {
+  font-family: $font-opensans;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: $color-black-444;
+  margin: 0 0 28px 0;
+  display: grid;
+  row-gap: 6px;
+}
+
+.top-product__details-wrapper {
+  display: grid;
+  grid-template-columns: 97px 1fr;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $color-gray-lines;
+}
+
+.top-product__details-value {
+  margin: 0;
+}
+
+.top-product__image {
+  display: flex;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 26px;
+}
+
+.top-product__price-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-product__price {
+  display: block;
+  font-family: $font-opensans;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $color-black-444;
+  margin-bottom: 24px;
+}
+
+.top-product__button {
+  width: 100%;
+}
