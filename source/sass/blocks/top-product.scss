@@ -13,7 +13,7 @@
     padding-bottom: 0;
   }
 
-  &:before {
+  &::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -35,14 +35,14 @@
 
 .top-product .container {
   @include desktop {
-    padding-bottom: 90px;
+    padding-bottom: 96px;
     position: relative;
 
     &::before {
       position: absolute;
       content: "";
       width: calc(100% - 100px);
-      height: 17px;
+      height: 23px;
       background-image: url("../img/svg/waves-gray-desktop.svg");
       background-repeat: repeat-x;
       bottom: 0;

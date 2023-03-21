@@ -114,25 +114,25 @@
 }
 
 .modal__form-input:checked {
-  &+.modal__form-control-mark {
+  & + .modal__form-control-mark {
     border-color: $color-green-basic;
   }
 }
 
 .modal__form-input:hover {
-  &+.modal__form-control-mark {
+  & + .modal__form-control-mark {
     border-color: rgba($color-black-444, 0.3);
   }
 }
 
 .modal__form-input:active {
-  &+.modal__form-control-mark {
+  & + .modal__form-control-mark {
     border-color: #62d1ba;
   }
 }
 
 .modal__form-input:checked:active {
-  &+.modal__form-control-mark {
+  & + .modal__form-control-mark {
     border-color: #62d1ba;
   }
 }
