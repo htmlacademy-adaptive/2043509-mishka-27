@@ -14,14 +14,17 @@
   }
 
   &:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 6px;
+    background-image: url("../img/svg/waves-gray-mobile.svg");
+    background-repeat: repeat-x;
+    bottom: 0;
+
     @include tablet {
-      position: absolute;
-      content: "";
-      width: 100%;
       height: 17px;
       background-image: url("../img/svg/waves-gray.svg");
-      background-repeat: repeat-x;
-      bottom: 0;
     }
 
     @include desktop {
