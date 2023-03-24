@@ -25,21 +25,25 @@ togglePopUp();
     modal.classList.add('is-open');
   };
 
-  modalButtons.forEach((button) => button.addEventListener('click', onModalButtonClick));
-
-  modalCloseButton.addEventListener('click', () => {
+  const onModalCloseButtonClick = (evt) => {
+    evt.preventDefault();
     modal.classList.remove('is-open');
-  });
+  };
 
-  document.addEventListener('keydown', (evt) => {
+  const onModalClick = (evt) => {
+    if (evt.target === modal) {
+      modal.classList.remove("is-open");
+    }
+  };
+
+  const onDocumentKeydown = (evt) => {
     if (evt.key === 'Escape') {
       evt.preventDefault();
       modal.classList.remove('is-open');
     }
-  });
+  };
 
-  document.addEventListener("click", (evt) => {
-    if (evt.target === modal) {
-      modal.classList.remove("is-open");
-    }
-  });
+  modalButtons.forEach((button) => button.addEventListener('click', onModalButtonClick));
+  modalCloseButton.addEventListener('click', onModalCloseButtonClick);
+  modal.addEventListener('click', onModalClick);
+  document.addEventListener('keydown', onDocumentKeydown);

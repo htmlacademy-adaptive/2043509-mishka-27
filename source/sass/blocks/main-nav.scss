@@ -211,16 +211,32 @@
     display: flex;
     justify-content: flex-end;
     padding-right: 50px;
-    padding-top: 19px;
   }
 
   @include desktop {
     grid-column: 3/4;
   }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    right: 0;
+    min-height: 62px;
+    height: 100%;
+    background-color: #fafafa;
+    border-top: 1px solid #ececec;
+    z-index: -1;
+  }
 }
 
-.main-nav__wrapper {
-  position: relative;
+.main-nav__delivery-text {
+  margin: 0;
+
+  @include tablet {
+    padding-top: 19px;
+  }
 }
 
 .main-nav__toggle {
