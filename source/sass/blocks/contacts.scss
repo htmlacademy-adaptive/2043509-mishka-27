@@ -2,11 +2,18 @@
   padding: 38px 0 39px 0;
 
   @include tablet {
-    padding: 68px 0;
+    padding: 68px 0 57px 0;
   }
 
   @include desktop {
-    padding: 59px 75px 61px 80px;
+    position: relative;
+    padding: 71px 50px 105px 50px;
+    display: grid;
+    grid-template-columns: 500px 527px;
+    gap: 23px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1150px;
   }
 }
 
@@ -29,6 +36,16 @@
       right: 53px;
     }
   }
+
+  @include desktop {
+    padding: 79px 0 0 174px;
+
+    &::before {
+      top: 63px;
+      right: unset;
+      left: 63px;
+    }
+  }
 }
 
 .contacts__title {
@@ -45,6 +62,13 @@
     line-height: 50px;
     max-width: 400px;
     margin-bottom: 49px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
+    max-width: 300px;
+    margin-bottom: 35px;
   }
 }
 
@@ -66,6 +90,12 @@
     margin-bottom: 49px;
     font-size: 17px;
     gap: 0;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
 }
 
@@ -94,10 +124,21 @@
   border-bottom: 1px solid $color-green-basic;
   max-width: 167px;
 
+  &:hover {
+    color: $color-green-darker;
+  }
+  &:active {
+    border-color: rgba($color-green-darker, 0.1);
+  }
+
   @include tablet {
     max-width: 204px;
     line-height: 30px;
     font-size: 17px;
+  }
+
+  @include desktop {
+    padding-bottom: 5px;
   }
 }
 
@@ -111,9 +152,6 @@
   @include tablet {
     font-size: 17px;
   }
-
-  @include desktop {
-  }
 }
 
 .contacts__map {
@@ -123,6 +161,10 @@
 
   @include tablet {
     margin-bottom: 55px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
   }
 }
 
@@ -158,5 +200,11 @@
     font-size: 17px;
     line-height: 20px;
     width: 230px;
+  }
+
+  @include desktop {
+    position: absolute;
+    bottom: 104px;
+    left: 225px;
   }
 }
