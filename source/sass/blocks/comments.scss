@@ -20,6 +20,16 @@
       z-index: -1;
     }
   }
+
+  @include desktop {
+    padding-top: 76px;
+    padding-bottom: 146px;
+    padding-left: calc(16.4%);
+
+    &::before {
+      left: 0;
+    }
+  }
 }
 
 .comments__title {
@@ -72,6 +82,10 @@
     &::after {
       display: none;
     }
+  }
+
+  @include desktop {
+    bottom: 187px;
   }
 }
 
