@@ -10,43 +10,7 @@
 
   @include desktop {
     padding-top: 115px;
-    padding-bottom: 0;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 6px;
-    background-image: url("../img/svg/waves-gray-mobile.svg");
-    background-repeat: repeat-x;
-    bottom: 0;
-
-    @include tablet {
-      height: 17px;
-      background-image: url("../img/svg/waves-gray.svg");
-    }
-
-    @include desktop {
-      background-image: none;
-    }
-  }
-}
-
-.top-product .container {
-  @include desktop {
     padding-bottom: 96px;
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: calc(100% - 100px);
-      height: 23px;
-      background-image: url("../img/svg/waves-gray-desktop.svg");
-      background-repeat: repeat-x;
-      bottom: 0;
-    }
   }
 }
 

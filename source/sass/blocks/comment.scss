@@ -1,0 +1,56 @@
+.comment {
+  margin: 0;
+}
+
+.comment__text {
+  font-family: $font-opensans;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  color: $color-black-444;
+  margin: 0 0 33px 0;
+
+  @include tablet {
+    font-size: 17px;
+    margin-bottom: 61px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+  }
+
+  @include desktop {
+    margin-bottom: 44px;
+  }
+}
+
+.comment__author-wrapper {
+  margin-bottom: 30px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.comment__author {
+  font-family: $font-opensans;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $color-black-000;
+  margin: 0;
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include desktop {
+    font-size: 17px;
+  }
+}
+
+.comment__author-nickname {
+  display: block;
+  font-family: $font-opensans;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  color: $color-black-444;
+}
