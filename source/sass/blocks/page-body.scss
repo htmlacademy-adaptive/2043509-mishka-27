@@ -13,5 +13,10 @@
   position: relative;
   width: 100%;
   z-index: 1;
-  overflow: hidden;
+  box-shadow: 0px 1px 0px $color-gray-lines, inset 0px 1px 0px $color-gray-lines;
+
+  @include tablet {
+    overflow: hidden;
+    box-shadow: none;
+  }
 }

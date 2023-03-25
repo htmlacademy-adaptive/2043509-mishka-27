@@ -2,17 +2,15 @@
   position: relative;
   padding-top: 72px;
   background-color: #fafafa;
-  // border-top: 1px solid $color-gray-lines;
   z-index: 0;
   background-image: url("../img/decoration-images/promo-back-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 50% -18px;
-  background-size: contain;
 
   @include tablet {
-    padding-top: 155px;
-    // margin-top: -62px;
-    background-position: 50% -2px;
+    padding-top: 93px;
+    background-position-y: -62px;
+    background-size: auto;
     background-image: url("../img/decoration-images/promo-back-tablet@1x.png");
 
     &::after {
@@ -29,8 +27,7 @@
   }
 
   @include desktop {
-    padding-top: 157px;
-    background-position: 50% -8px;
+    padding-top: 96px;
 
     &::after {
       background-image: url("../img/svg/waves-white-desktop.svg");
