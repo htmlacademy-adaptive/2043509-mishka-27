@@ -24,6 +24,7 @@
       grid-row: 1/2;
       grid-template-columns: 84px 1fr;
       padding-right: 50px;
+      position: relative;
     }
   }
 
@@ -42,15 +43,17 @@
   @include tablet {
     padding-left: 50px;
     background-color: transparent;
+    column-gap: 15px;
 
     & .main-nav__link {
-      padding: 19px 0 19px 0;
+      padding: 21px 0 19px 0;
     }
   }
 
   @include desktop {
     box-shadow: none;
     padding-left: 15px;
+    column-gap: 0;
   }
 }
 
@@ -67,6 +70,19 @@
 }
 
 .main-nav__list--site-nav {
+  @include tablet {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 200vw;
+      right: -100vw;
+      height: 100%;
+      background-color: $color-white;
+      border-bottom: 1px solid #ececec;
+      z-index: -1;
+    }
+  }
+
   & .main-nav__link:hover {
     & .main-nav__icon-img {
       color: $color-green-basic;
@@ -80,6 +96,20 @@
 
   & .main-nav__link:active {
     opacity: 0.6;
+  }
+
+  & .main-nav__item {
+    position: relative;
+  }
+
+  & .main-nav__icon-img {
+    position: absolute;
+    left: 31px;
+    top: 31px;
+
+    @include tablet {
+      top: 35px;
+    }
   }
 }
 
@@ -98,8 +128,7 @@
     padding: 0 20px 0 35px;
 
     & .main-nav__link {
-      padding-top: 19px;
-      padding-bottom: 19px;
+      padding: 19px 0 19px 0;
     }
   }
 }
@@ -136,11 +165,19 @@
   }
 }
 
+.main-nav__item--cart {
+  @include tablet {
+    & .main-nav__link {
+      padding-left: 82px;
+      padding-right: 0;
+    }
+  }
+}
+
 .main-nav__link {
   display: flex;
   width: 100%;
-  align-items: center;
-  padding: 28px 0 27px 76px;
+  padding: 28px 27px 27px 76px;
   color: $color-black-000;
   font-family: $font-opensans;
   font-size: 17px;
@@ -149,12 +186,7 @@
   text-decoration: none;
 
   @include tablet {
-    padding-left: 0;
     font-size: 15px;
-  }
-
-  .main-nav__list--site-nav & {
-    padding-left: 0;
   }
 
   .main-nav__list--main-nav & {
@@ -192,14 +224,6 @@
   }
 }
 
-.main-nav__icon-img {
-  width: 76px;
-
-  @include tablet {
-    width: 82px;
-  }
-}
-
 .main-nav__delivery {
   color: $color-black-444;
   display: none;
@@ -216,26 +240,13 @@
   @include desktop {
     grid-column: 3/4;
   }
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    left: 0;
-    right: 0;
-    min-height: 62px;
-    height: 100%;
-    background-color: #fafafa;
-    border-top: 1px solid #ececec;
-    z-index: -1;
-  }
 }
 
 .main-nav__delivery-text {
   margin: 0;
 
   @include tablet {
-    padding-top: 19px;
+    padding-top: 21px;
   }
 }
 

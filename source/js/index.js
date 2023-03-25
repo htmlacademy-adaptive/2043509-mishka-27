@@ -19,10 +19,12 @@ togglePopUp();
   const modalButtons = document.querySelectorAll('.modal-button');
   const modal = document.querySelector('.modal');
   const modalCloseButton = document.querySelector('.modal__button');
+  const modalFormInput = document.querySelector('.modal__form-input');
 
   const onModalButtonClick = (evt) => {
     evt.preventDefault();
     modal.classList.add('is-open');
+    modalFormInput.focus();
   };
 
   const onModalCloseButtonClick = (evt) => {
