@@ -189,6 +189,10 @@
     font-size: 15px;
   }
 
+  &--current {
+    pointer-events: none;
+  }
+
   .main-nav__list--main-nav & {
     @include desktop {
       font-size: 17px;
