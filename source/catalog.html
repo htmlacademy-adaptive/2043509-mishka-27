@@ -180,34 +180,39 @@
       </ul>
     </section>
     <section class="presentation container">
-      <h2 class="presentation__title">Процесс производства</h2>
-      <div class="presentation__video-wrapper">
-        <picture>
-          <source type="image/webp" media="(min-width: 1150px)"
-            srcset="./img/content-images/video-desktop@2x.webp 2x, ./img/content-images/video-desktop@1x.webp 1x">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="./img/content-images/video-tablet@2x.webp 2x, ./img/content-images/video-tablet@1x.webp 1x">
-          <source type="image/webp" media="(min-width: 320px)"
-            srcset="./img/content-images/video-mobile@2x.webp 2x, ./img/content-images/video-mobile@1x.webp 1x">
-          <source media="(min-width: 1150px)"
-            srcset="./img/content-images/video-desktop@2x.jpg 2x, ./img/content-images/video-desktop@1x.jpg 1x">
-          <source media="(min-width: 768px)"
-            srcset="./img/content-images/video-tablet@2x.jpg 2x, ./img/content-images/video-tablet@1x.jpg 1x">
-          <source media="(min-width: 320px)"
-            srcset="./img/content-images/video-mobile@2x.jpg 2x, ./img/content-images/video-mobile@1x.jpg 1x">
-          <img class="presentation__video-image" src="./img/content-images/video-mobile@1x.jpg"
-            alt="Вязаная корзинка серо-зелёного цвета." width="260" height="150">
-        </picture>
-        <a class="presentation__play-button" href="#" aria-label="Воспроизвести видео.">
-          <svg class="presentation__play-button-img" width="101" height="77" role="img" focusable="false">
-            <use href="./img/svg/sprite.svg#icon-play-button"></use>
-          </svg>
-        </a>
+      <div class="presentation__wrapper">
+        <h2 class="presentation__title">Процесс производства</h2>
+        <div class="presentation__video-wrapper">
+          <picture class="presentation__video-picture">
+            <source type="image/webp" media="(min-width: 1150px)"
+              srcset="./img/content-images/video-desktop@2x.webp 2x, ./img/content-images/video-desktop@1x.webp 1x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="./img/content-images/video-tablet@2x.webp 2x, ./img/content-images/video-tablet@1x.webp 1x">
+            <source type="image/webp" media="(min-width: 320px)"
+              srcset="./img/content-images/video-mobile@2x.webp 2x, ./img/content-images/video-mobile@1x.webp 1x">
+            <source media="(min-width: 1150px)"
+              srcset="./img/content-images/video-desktop@2x.png 2x, ./img/content-images/video-desktop@1x.png 1x">
+            <source media="(min-width: 768px)"
+              srcset="./img/content-images/video-tablet@2x.png 2x, ./img/content-images/video-tablet@1x.png 1x">
+            <source media="(min-width: 320px)"
+              srcset="./img/content-images/video-mobile@2x.png 2x, ./img/content-images/video-mobile@1x.png 1x">
+            <img class="presentation__video-image" src="./img/content-images/video-mobile@1x.png"
+              alt="Вязаная корзинка серо-зелёного цвета." width="260" height="150">
+          </picture>
+          <a class="presentation__play-button" href="#" aria-label="Воспроизвести видео.">
+            <svg class="presentation__play-button-img" width="101" height="77" role="img" focusable="false">
+              <use href="./img/svg/sprite.svg#icon-play-button"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="presentation__text-wrapper">
+          <p class="presentation__subtitle">По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное
+            видео
+            о&nbsp;том, как появляются наши товары.
+          </p>
+          <a class="presentation__button button" href="form.html">Сделать заказ</a>
+        </div>
       </div>
-      <p class="presentation__subtitle">По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео
-        о&nbsp;том, как появляются наши товары.
-      </p>
-      <a class="presentation__button button" href="form.html">Сделать заказ</a>
     </section>
   </main>
   <footer class="main-footer">
