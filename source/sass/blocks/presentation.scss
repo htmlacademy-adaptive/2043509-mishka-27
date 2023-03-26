@@ -7,6 +7,10 @@
   @include tablet {
     padding-bottom: 64px;
   }
+
+  @include desktop {
+    padding-bottom: 105px;
+  }
 }
 
 .presentation__wrapper {
@@ -26,6 +30,14 @@
     border: none;
     align-items: start;
     padding-bottom: 46px;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 683px 1fr;
+    grid-template-rows: min-content 1fr;
+    padding-bottom: 0;
+    align-items: stretch;
   }
 }
 
@@ -58,6 +70,13 @@
     padding-left: 105px;
     max-width: 100%;
   }
+
+  @include desktop {
+    padding-top: 96px;
+    margin-bottom: 28px;
+    max-width: 280px;
+    padding-left: 79px;
+  }
 }
 
 .presentation__title::before {
@@ -75,6 +94,11 @@
     top: 0;
     left: 40px;
   }
+
+  @include desktop {
+    top: 47px;
+    left: 79px;
+  }
 }
 
 .presentation__video-wrapper {
@@ -86,6 +110,12 @@
   @include tablet {
     order: -1;
     margin-bottom: 41px;
+  }
+
+  @include desktop {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    margin-bottom: 0;
   }
 }
 
@@ -101,6 +131,11 @@
 
   @include tablet {
     max-height: 455px;
+  }
+
+  @include desktop {
+    max-height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -130,6 +165,12 @@
     padding-left: 41px;
     padding-right: 41px;
   }
+
+  @include desktop {
+    padding-left: 79px;
+    padding-right: 57px;
+    padding-bottom: 40px;
+  }
 }
 
 .presentation__text-wrapper::before {
@@ -143,6 +184,13 @@
     border: 1px solid $color-gray-lines;
     pointer-events: none;
   }
+
+  @include desktop {
+    height: 100%;
+    width: calc(100% - 683px);
+    left: unset;
+    right: 0;
+  }
 }
 
 .presentation__subtitle {
@@ -155,6 +203,7 @@
 
   @include tablet {
     font-size: 15px;
+    line-height: 30px;
   }
 }
 
