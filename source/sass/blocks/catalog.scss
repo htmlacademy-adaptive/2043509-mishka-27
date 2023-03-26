@@ -5,6 +5,35 @@
   row-gap: 30px;
   max-width: 500px;
   margin: 0 auto;
+
+  @include tablet {
+    row-gap: 54px;
+    padding-top: 67px;
+    padding-bottom: 53px;
+    max-width: 100%;
+  }
+
+  @include desktop {
+    row-gap: 51px;
+    column-gap: 51px;
+    padding-top: 111px;
+    padding-bottom: 57px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.catalog__item {
+  display: grid;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 50%);
+    width: 100%;
+  }
+
+  @include desktop {
+    grid-template-columns: unset;
+    grid-template-rows: max-content;
+  }
 }
 
 .catalog__link-image:hover {
@@ -22,21 +51,39 @@
 .catalog__product-image {
   display: flex;
   width: 100%;
-  height: auto;
+  height: 100%;
+
+  @include tablet {
+    min-width: 334px;
+  }
+
+  @include desktop {
+    min-width: 316px;
+  }
 }
 
 .catalog__product-description {
   position: relative;
   padding: 27px 28px 0 28px;
   border: 1px solid $color-gray-lines;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    padding: 27px 33px 0 34px;
+  }
 }
 
 .catalog__info-wrapper {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid $color-gray-lines;
+  margin-bottom: 18px;
+
+  @include tablet {
+    gap: 7px;
+    margin-bottom: auto;
+  }
 }
 
 .catalog__link-title {
@@ -46,6 +93,10 @@
   line-height: 24px;
   color: $color-black-000;
   text-decoration: none;
+
+  @include tablet {
+    font-size: 20px;
+  }
 }
 
 .catalog__link-title::before {
@@ -76,12 +127,17 @@
   font-size: 13px;
   line-height: 30px;
   color: $color-black-444;
+
+  @include tablet {
+    font-size: 15px;
+  }
 }
 
 .catalog__price-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  border-top: 1px solid $color-gray-lines;
 }
 
 .catalog__product-price {
@@ -91,6 +147,11 @@
   font-size: 15px;
   line-height: 24px;
   color: $color-black-000;
+
+  @include tablet {
+    padding: 24px 0 25px 0;
+    font-size: 17px;
+  }
 }
 
 .catalog__buy-button {
@@ -106,5 +167,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @include tablet {
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
