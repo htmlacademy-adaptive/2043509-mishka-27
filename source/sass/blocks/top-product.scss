@@ -156,7 +156,8 @@
   @include tablet {
     position: absolute;
     width: 334px;
-    height: 404px;
+    height: 100%;
+    object-fit: cover;
     bottom: 0;
     right: 0;
     margin-bottom: 0;
@@ -164,7 +165,6 @@
 
   @include desktop {
     width: 525px;
-    height: 636px;
     z-index: 0;
   }
 }

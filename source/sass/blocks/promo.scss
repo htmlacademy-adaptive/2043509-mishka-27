@@ -72,6 +72,18 @@
 
 .promo__categories-item {
   position: relative;
+
+  &:nth-child(2) {
+    background-color: #56c3b2;
+  }
+
+  &:nth-child(4n + 2) {
+    background-color: #56c3b2;
+  }
+
+  &:nth-child(4n - 1) {
+    background-color: #56c3b2;
+  }
 }
 
 .promo__categories-link {
@@ -84,7 +96,7 @@
   font-size: 19px;
   line-height: 24px;
   text-decoration: none;
-  background-color: $color-green-basic;
+  // background-color: $color-green-basic;
   color: #149080;
   transition: all 0.3s ease;
 
@@ -100,7 +112,6 @@
 
   .promo__categories-item--toys & {
     padding-right: 27px;
-    background-color: #56c3b2;
 
     @include tablet {
       padding-right: 33px;
