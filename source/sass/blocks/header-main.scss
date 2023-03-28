@@ -12,14 +12,14 @@
       right: 0;
       height: 100%;
       min-height: 62px;
-      background-color: #fafafa;
+      background-color: #f9f9f9;
       border-top: 1px solid rgba($color-black-000, 0.1);
       z-index: -1;
     }
   }
 }
 
-.header-main--catalog {
+.header-main--not-index {
   @include tablet {
     &::before {
       background-color: $color-gray-back;
@@ -50,23 +50,10 @@
 .header-main__logo {
   position: relative;
   text-decoration: none;
-  width: 86px;
-  height: 35px;
-  background-image: url("../img/svg/logo-mobile.svg");
-  background-repeat: no-repeat;
   z-index: 5;
 
   @include tablet {
-    width: 113px;
-    height: 46px;
     top: 0;
-    background-image: url("../img/svg/logo-tablet.svg");
-  }
-
-  @include desktop {
-    width: 149px;
-    height: 72px;
-    background-image: url("../img/svg/logo-desktop.svg");
   }
 
   &:hover {
@@ -79,25 +66,16 @@
 }
 
 .header-main__logo-image {
-  &--not-mobile {
-    padding-left: 6px;
-  }
+  width: 86px;
+  height: 35px;
 
   @include tablet {
-    &--not-mobile {
-      color: #444444;
-      padding-left: 5px;
-      width: 67px;
-    }
+    width: 113px;
+    height: 46px;
   }
 
   @include desktop {
-    width: 38px;
-    height: 22px;
-
-    &--not-mobile {
-      width: 78px;
-      padding-left: 8px;
-    }
+    width: 149px;
+    height: 72px;
   }
 }

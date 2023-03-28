@@ -17,9 +17,22 @@
 <body class="page-body">
   <!-- При отключенном js отображается меню мобильной версии в потоке за счет модификатора no-js -->
   <div class="page-body__header-wrapper">
-    <header class="header-main header-main--catalog no-js">
+    <header class="header-main header-main--not-index no-js">
       <div class="header-main__logo-wrapper">
-        <a class="header-main__logo" href="index.html" aria-label="Логотип сайта Мишка, преход на главную страницу.">
+        <a class="header-main__logo" href="index.html" aria-label="Логотип сайта Мишка, переход на главную страницу.">
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1150px)" srcset="./img/svg/logo-desktop.svg">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="./img/svg/logo-tablet.svg">
+            <source type="image/svg+xml" media="(min-width: 320px)" srcset="./img/svg/logo-mobile.svg">
+            <source media="(min-width: 1150px)"
+              srcset="./img/content-images/logo-desktop@1x.png 2x, ./img/content-images/logo-desktop@1x.png 1x">
+            <source media="(min-width: 768px)"
+              srcset="./img/content-images/logo-tablet@1x.png 2x, ./img/content-images/logo-tablet@1x.png 1x">
+            <source media="(min-width: 320px)"
+              srcset="./img/content-images/logo-mobile@1x.png 2x, ./img/content-images/logo-mobile@1x.png 1x">
+            <img class="header-main__logo-image" src="./img/content-images/logo-mobile@1x.png"
+              alt="Логотип сайта Мишка." width="86" height="35">
+          </picture>
         </a>
       </div>
       <nav class="main-nav">
@@ -30,7 +43,7 @@
                 товаров</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Вязание на заказ</a>
+              <a class="main-nav__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="main-nav__list main-nav__list--site-nav">
