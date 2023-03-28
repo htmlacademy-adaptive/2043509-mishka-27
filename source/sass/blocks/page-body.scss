@@ -58,3 +58,41 @@
     line-height: 57px;
   }
 }
+
+.page-body__form-title-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 74px 0 73px 0;
+  background-color: $color-gray-back;
+
+  @include tablet {
+    padding-top: 50px;
+    padding-bottom: 87px;
+  }
+
+  @include desktop {
+    padding-bottom: 96px;
+  }
+}
+
+.page-body__form-title {
+  font-family: $font-opensans;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  margin: 0;
+  max-width: 270px;
+  text-align: center;
+
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
+    max-width: 500px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
