@@ -98,7 +98,8 @@
     padding-bottom: 35px;
 
     @include tablet {
-      padding-bottom: 50px;
+      padding-top: 50px;
+      padding-bottom: 12px;
     }
 
     @include desktop {
@@ -106,10 +107,11 @@
     }
   }
 
-  &-email {
+  &--email {
     padding-bottom: 35px;
 
     @include tablet {
+      padding-top: 12px;
       padding-bottom: 50px;
     }
 
@@ -131,6 +133,103 @@
   }
 }
 
+.order-form__label {
+  position: relative;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  display: flex;
+  width: 100%;
+
+  &:not(:last-child) {
+    .order-form__form-field--person & {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.order-form__input {
+  border: none;
+  box-shadow: inset 0 -2px 0 $color-black-000;
+  width: 100%;
+  padding: 0;
+  font-family: $font-opensans;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+  color: $color-black-444;
+
+  @include tablet {
+    background-color: transparent;
+  }
+
+  .order-form__form-field--person & {
+    padding: 17px 0 17px 0;
+  }
+
+  .order-form__form-field--phone & {
+    padding: 14px 0 20px 0;
+  }
+
+  .order-form__form-field--email & {
+    padding: 16px 0 18px 0;
+  }
+
+  &::placeholder {
+    color: rgba($color-black-000, 0.3);
+  }
+
+  &:not(:placeholder-shown) {
+    box-shadow: inset 0 -2px 0 $color-green-basic;
+  }
+
+  &:hover {
+    box-shadow: inset 0 -2px 0 $color-green-basic;
+  }
+}
+
+.order-form__input-img {
+  color: rgba($color-black-000, 0.2);
+  position: absolute;
+
+  .order-form__form-field--phone & {
+    top: 11px;
+    right: 17px;
+  }
+
+  .order-form__form-field--email & {
+    top: 16px;
+    right: 15px;
+  }
+}
+
+.order-form__input:hover + .order-form__input-img {
+  color: $color-green-basic;
+}
+
+.order-form__input:not(:placeholder-shown) + .order-form__input-img {
+  color: $color-green-basic;
+}
+
+.order-form__control:focus {
+  & + .order-form__mark {
+    border-color: $color-green-basic;
+  }
+}
+
+.order-form__control:hover {
+  & + .order-form__mark {
+    border-color: $color-green-basic;
+  }
+}
+
+.order-form__control:active {
+  & + .order-form__mark {
+    border-color: rgba($color-black-000, 0.3);
+  }
+}
+
 .order-form__form-legend {
   position: relative;
   text-transform: uppercase;
@@ -145,6 +244,11 @@
     position: absolute;
     left: 0;
     top: 67px;
+    max-width: 100px;
+
+    .order-form__form-field--email & {
+      top: 29px;
+    }
   }
 
   &::before {
@@ -164,26 +268,54 @@
 
   .order-form__form-field--type & {
     margin-bottom: 30px;
+
+    @include tablet {
+      margin: 0;
+    }
   }
 
   .order-form__form-field--color & {
     margin-bottom: 25px;
+
+    @include tablet {
+      margin: 0;
+    }
   }
 
   .order-form__form-field--person & {
     margin-bottom: 29px;
+
+    @include tablet {
+      margin: 0;
+    }
   }
 
   .order-form__form-field--phone & {
     margin-bottom: 5px;
+
+    @include tablet {
+      margin: 0;
+    }
   }
 
   .order-form__form-field--email & {
     margin-bottom: 5px;
+
+    &::before {
+      width: calc(100% - 78px);
+    }
+
+    @include tablet {
+      margin: 0;
+    }
   }
 
   .order-form__form-field--add & {
     margin-bottom: 23px;
+
+    @include tablet {
+      margin: 0;
+    }
   }
 }
 
@@ -213,16 +345,12 @@
   }
 }
 
-.order-form__label {
-  display: flex;
-  width: 100%;
-}
-
 .order-form__label--type {
   position: relative;
   padding-left: 61px;
   min-height: 42px;
   display: flex;
+  flex-direction: row;
   align-items: center;
 
   @include tablet {
@@ -236,6 +364,7 @@
   padding-left: 61px;
   min-height: 38px;
   display: flex;
+  flex-direction: row;
   align-items: center;
 
   @include tablet {
