@@ -68,20 +68,18 @@
   padding: 0;
 
   @include tablet {
-    padding: 50px 0 50px 167px;
+    padding: 50px 0 50px 0;
     position: relative;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    column-gap: 30px;
   }
 
   &--type {
     padding-bottom: 31px;
 
     @include tablet {
-      padding-left: 169px;
       padding-bottom: 50px;
-    }
-
-    @include desktop {
-      padding-left: 128px;
     }
   }
 
@@ -91,14 +89,6 @@
     @include tablet {
       padding-bottom: 50px;
     }
-
-    @include desktop {
-      padding-left: 128px;
-    }
-  }
-
-  @include desktop {
-    padding-left: 128px;
   }
 
   &--phone {
@@ -108,10 +98,6 @@
       padding-top: 50px;
       padding-bottom: 12px;
       max-width: 828px;
-    }
-
-    @include desktop {
-      padding-left: 128px;
     }
   }
 
@@ -123,10 +109,6 @@
       padding-bottom: 50px;
       max-width: 828px;
     }
-
-    @include desktop {
-      padding-left: 128px;
-    }
   }
 
   &--add {
@@ -136,14 +118,12 @@
       padding-bottom: 53px;
       max-width: 828px;
     }
-
-    @include desktop {
-      padding-left: 128px;
-    }
   }
 }
 
 .order-form__form-field--person {
+  padding-bottom: 35px;
+
   @include tablet {
     padding-bottom: 50px;
     max-width: 828px;
@@ -267,14 +247,8 @@
   padding: 0;
 
   @include tablet {
-    position: absolute;
-    left: 0;
-    top: 67px;
-    max-width: 100px;
-
-    .order-form__form-field--email & {
-      top: 29px;
-    }
+    display: flex;
+    transform: translateY(20px);
   }
 
   &::before {
@@ -326,10 +300,6 @@
 
   .order-form__form-field--email & {
     margin-bottom: 5px;
-
-    &::before {
-      width: calc(100% - 78px);
-    }
 
     @include tablet {
       margin: 0;

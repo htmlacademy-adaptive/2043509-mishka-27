@@ -74,8 +74,8 @@
   @include desktop {
     padding-top: 96px;
     margin-bottom: 28px;
-    max-width: 280px;
     padding-left: 79px;
+    padding-right: 57px;
   }
 }
 
@@ -144,7 +144,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: linear 0.3s;
+  transition: linear 0.2s;
 
   &:hover {
     transform: translate(-50%, -50%) scale(1.2);

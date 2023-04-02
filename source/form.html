@@ -91,7 +91,7 @@
           заказа и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы уточнить детали.</p>
         <form class="order-form__form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="order-form__form-field order-form__form-field--type">
-            <legend class="order-form__form-legend">Тип</legend>
+            <h3 class="order-form__form-legend">Тип</h3>
             <ul class="order-form__list">
               <li class="order-form__item">
                 <label class="order-form__label order-form__label--type">
@@ -112,7 +112,7 @@
             </ul>
           </fieldset>
           <fieldset class="order-form__form-field order-form__form-field--color order-form__form-field--gray-back">
-            <legend class="order-form__form-legend">Цвет</legend>
+            <h3 class="order-form__form-legend">Цвет</h3>
             <ul class="order-form__list">
               <li class="order-form__item">
                 <label class="order-form__label order-form__label--color">
@@ -165,22 +165,30 @@
             </ul>
           </fieldset>
           <fieldset class="order-form__form-field order-form__form-field--person">
-            <legend class="order-form__form-legend">ФИО</legend>
-            <label class="order-form__label">
-              <span class="order-form__label-text">Имя:</span>
-              <input class="order-form__input" type="text" name="name" placeholder="Введите ваше имя*" required>
-            </label>
-            <label class="order-form__label">
-              <span class="order-form__label-text">Фамилия:</span>
-              <input class="order-form__input" type="text" name="name" placeholder="Укажите фамилию*" required>
-            </label>
-            <label class="order-form__label">
-              <span class="order-form__label-text">Отчество:</span>
-              <input class="order-form__input" type="text" name="name" placeholder="Отчество, если желаете">
-            </label>
+            <h3 class="order-form__form-legend">ФИО</h3>
+            <ul class="order-form__list">
+              <li class="order-form__item">
+                <label class="order-form__label">
+                  <span class="order-form__label-text">Имя:</span>
+                  <input class="order-form__input" type="text" name="name" placeholder="Введите ваше имя*" required>
+                </label>
+              </li>
+              <li class="order-form__item">
+                <label class="order-form__label">
+                  <span class="order-form__label-text">Фамилия:</span>
+                  <input class="order-form__input" type="text" name="name" placeholder="Укажите фамилию*" required>
+                </label>
+              </li>
+              <li class="order-form__item">
+                <label class="order-form__label">
+                  <span class="order-form__label-text">Отчество:</span>
+                  <input class="order-form__input" type="text" name="name" placeholder="Отчество, если желаете">
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="order-form__form-field order-form__form-field--phone order-form__form-field--gray-back">
-            <legend class="order-form__form-legend">Тел</legend>
+            <h3 class="order-form__form-legend">Тел</h3>
             <label class="order-form__label">
               <input class="order-form__input" type="tel" name="phone" value=""
                 placeholder="+7&nbsp;ХХХ ХХХ ХХ&nbsp;ХХ*" required aria-label="Введите номер телефона.">
@@ -190,7 +198,7 @@
             </label>
           </fieldset>
           <fieldset class="order-form__form-field order-form__form-field--email order-form__form-field--gray-back">
-            <legend class="order-form__form-legend">E-mail</legend>
+            <h3 class="order-form__form-legend">E-mail</h3>
             <label class="order-form__label">
               <input class="order-form__input" type="email" name="email" value="" placeholder="Ваш Email*" required>
               <svg class="order-form__input-img" width="32" height="21" role="img" focusable="false">
@@ -199,7 +207,7 @@
             </label>
           </fieldset>
           <fieldset class="order-form__form-field order-form__form-field--add">
-            <legend class="order-form__form-legend">Доп</legend>
+            <h3 class="order-form__form-legend">Доп</h3>
             <textarea class="order-form__text-area" name="commentary" cols="30" rows="7"
               placeholder="Опишите все ваши пожелания к&nbsp;заказу"
               aria-label="Дополните сведения, если необходимо."></textarea>
