@@ -77,16 +77,26 @@
 .promo__categories-item {
   position: relative;
 
-  &:nth-child(2) {
+  &:nth-child(2n) {
     background-color: #56c3b2;
   }
 
-  &:nth-child(4n + 2) {
-    background-color: #56c3b2;
-  }
+  @include tablet {
+    &:nth-child(2n) {
+      background-color: inherit;
+    }
 
-  &:nth-child(4n - 1) {
-    background-color: #56c3b2;
+    &:nth-child(2) {
+      background-color: #56c3b2;
+    }
+
+    &:nth-child(4n + 2) {
+      background-color: #56c3b2;
+    }
+
+    &:nth-child(4n - 1) {
+      background-color: #56c3b2;
+    }
   }
 }
 

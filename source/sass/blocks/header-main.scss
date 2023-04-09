@@ -63,6 +63,10 @@
   &:active {
     opacity: 0.6;
   }
+
+  &--current {
+    pointer-events: none;
+  }
 }
 
 .header-main__logo-image {
