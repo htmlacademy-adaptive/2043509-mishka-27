@@ -29,12 +29,13 @@
   background-color: $color-gray-back;
 
   @include tablet {
-    padding-top: 50px;
-    padding-bottom: 87px;
+    padding-top: 38px;
+    padding-bottom: 85px;
   }
 
   @include desktop {
-    padding-bottom: 96px;
+    padding-top: 40px;
+    padding-bottom: 113px;
   }
 }
 

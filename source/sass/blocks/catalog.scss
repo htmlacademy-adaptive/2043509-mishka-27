@@ -8,8 +8,8 @@
 
   @include tablet {
     row-gap: 54px;
-    padding-top: 67px;
-    padding-bottom: 53px;
+    padding-top: 61px;
+    padding-bottom: 60px;
     max-width: 100%;
   }
 
@@ -80,6 +80,11 @@
   @include tablet {
     padding: 27px 33px 0 34px;
   }
+
+  @include desktop {
+    padding: 27px 33px 0 27px;
+    gap: 11px;
+  }
 }
 
 .catalog__info-wrapper {
@@ -91,6 +96,10 @@
   @include tablet {
     gap: 7px;
     margin-bottom: auto;
+  }
+
+  @include desktop {
+    gap: 6px;
   }
 }
 
@@ -104,6 +113,7 @@
 
   @include tablet {
     font-size: 20px;
+    max-width: 240px;
   }
 }
 
@@ -135,7 +145,7 @@
 }
 
 .catalog__product-price {
-  padding: 22px 0 27px 0;
+  padding: 22px 0 25px 0;
   font-family: $font-opensans;
   font-weight: 700;
   font-size: 15px;
@@ -149,10 +159,10 @@
 }
 
 .catalog__buy-button {
-  padding: 22px 20px 27px 20px;
+  padding: 22px 20px 26px 20px;
   color: $color-black-000;
   opacity: 0.2;
-  transform: translateX(20px);
+  transform: translateX(22px);
 
   &:hover {
     color: $color-green-basic;
