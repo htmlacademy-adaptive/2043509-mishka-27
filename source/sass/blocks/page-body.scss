@@ -68,12 +68,13 @@
   background-color: $color-gray-back;
 
   @include tablet {
-    padding-top: 50px;
+    padding-top: 37px;
     padding-bottom: 87px;
   }
 
   @include desktop {
-    padding-bottom: 96px;
+    padding-top: 40px;
+    padding-bottom: 114px;
   }
 }
 

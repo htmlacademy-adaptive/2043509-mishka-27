@@ -2,10 +2,17 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding-top: 17px;
+
+  @include tablet {
+    padding-top: 54px;
+  }
 
   @include desktop {
+    padding-top: 98px;
+
     & .container {
-      padding-left: 97px;
+      padding-left: 111px;
       padding-right: 100px;
     }
   }
@@ -36,21 +43,18 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-  margin: 0 0 29px 0;
-  padding-top: 17px;
+  margin: 0 0 30px 0;
   max-width: 620px;
 
   @include tablet {
     font-size: 17px;
     line-height: 30px;
-    padding-top: 54px;
     margin-bottom: 13px;
     max-width: 100%;
   }
 
   @include desktop {
-    padding-top: 98px;
-    padding-left: 128px;
+    padding-left: 114px;
     max-width: 800px;
   }
 }
@@ -59,7 +63,7 @@
   padding-bottom: 55px;
 
   @include tablet {
-    padding-bottom: 55px;
+    padding-bottom: 30px;
   }
 }
 
@@ -73,7 +77,11 @@
     position: relative;
     display: grid;
     grid-template-columns: 100px 1fr;
-    column-gap: 30px;
+    column-gap: 68px;
+  }
+
+  @include desktop {
+    column-gap: 14px;
   }
 
   &--type {
@@ -81,6 +89,10 @@
 
     @include tablet {
       padding-bottom: 50px;
+    }
+
+    @include desktop {
+      padding-bottom: 48px;
     }
   }
 
@@ -90,18 +102,23 @@
     @include tablet {
       padding-bottom: 50px;
     }
+
+    @include desktop {
+      padding-top: 48px;
+      padding-bottom: 52px;
+    }
   }
 
   &--phone {
     padding-bottom: 35px;
 
     @include tablet {
-      padding-top: 50px;
+      padding-top: 47px;
       padding-bottom: 12px;
     }
 
     @include desktop {
-      max-width: 828px;
+      max-width: 814px;
     }
   }
 
@@ -114,19 +131,20 @@
     }
 
     @include desktop {
-      max-width: 828px;
+      max-width: 814px;
     }
   }
 
   &--add {
-    padding-bottom: 17px;
+    padding-bottom: 14px;
 
     @include tablet {
       padding-bottom: 53px;
     }
 
     @include desktop {
-      max-width: 828px;
+      max-width: 814px;
+      padding-bottom: 48px;
     }
   }
 }
@@ -134,8 +152,17 @@
 .order-form__form-field--person {
   padding-bottom: 35px;
 
+  & .order-form__list {
+    display: grid;
+    row-gap: 22px;
+  }
+
   @include tablet {
     padding-bottom: 50px;
+
+    & .order-form__list {
+      row-gap: 24px;
+    }
 
     & .order-form__label {
       flex-direction: row;
@@ -148,7 +175,7 @@
   }
 
   @include desktop {
-    max-width: 828px;
+    max-width: 814px;
   }
 }
 
@@ -166,6 +193,10 @@
       margin-bottom: 22px;
     }
   }
+
+  @include tablet {
+    font-size: 19px;
+  }
 }
 
 .order-form__input {
@@ -181,18 +212,31 @@
 
   @include tablet {
     background-color: transparent;
+    font-size: 19px;
   }
 
   .order-form__form-field--person & {
-    padding: 17px 0 17px 0;
+    padding: 17px 0 16px 0;
+
+    @include tablet {
+      padding: 12px 0 14px 18px;
+    }
   }
 
   .order-form__form-field--phone & {
     padding: 14px 0 20px 0;
+
+    @include tablet {
+      padding: 12px 0 16px 16px;
+    }
   }
 
   .order-form__form-field--email & {
     padding: 16px 0 18px 0;
+
+    @include tablet {
+      padding: 12px 0 16px 16px;
+    }
   }
 
   &::placeholder {
@@ -214,12 +258,30 @@
 
   .order-form__form-field--phone & {
     top: 11px;
-    right: 17px;
+    right: 7px;
+
+    @include tablet {
+      top: 14px;
+      right: 27px;
+    }
+
+    @include desktop {
+      right: 8px;
+    }
   }
 
   .order-form__form-field--email & {
     top: 16px;
-    right: 15px;
+    right: 3px;
+
+    @include tablet {
+      top: 17px;
+      right: 22px;
+    }
+
+    @include desktop {
+      right: 4px;
+    }
   }
 }
 
@@ -258,6 +320,7 @@
   line-height: 16px;
   width: 100%;
   padding: 0;
+  margin: 0;
 
   @include tablet {
     display: flex;
@@ -320,7 +383,7 @@
   }
 
   .order-form__form-field--add & {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
 
     @include tablet {
       margin: 0;
@@ -349,11 +412,12 @@
 
     @include tablet {
       row-gap: 24px;
-      grid-template-columns: repeat(auto-fit, 250px);
+      grid-template-columns: repeat(auto-fit, 233px);
+      column-gap: 28px;
     }
 
     @include desktop {
-      column-gap: 12px;
+      column-gap: 30px;
     }
   }
 }
@@ -406,8 +470,8 @@
 }
 
 .order-form__mark--radio {
-  width: 42px;
-  height: 42px;
+  width: 41px;
+  height: 41px;
   border-radius: 50%;
 
   @include tablet {
@@ -519,8 +583,8 @@
   }
 
   @include desktop {
-    padding-left: 128px;
-    max-width: 828px;
+    padding-left: 114px;
+    max-width: 814px;
   }
 }
 
@@ -546,6 +610,7 @@
   width: 100%;
   font-size: 17px;
   line-height: 16px;
+  padding: 18px;
 
   @include tablet {
     max-width: 230px;
