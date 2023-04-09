@@ -90,6 +90,7 @@
   @include desktop {
     padding-left: 175px;
     padding-right: calc(100% - 292px - 175px);
+    position: static;
   }
 }
 
@@ -157,8 +158,7 @@
     position: absolute;
     width: 334px;
     height: 100%;
-    object-fit: cover;
-    bottom: 0;
+    bottom: -6px;
     right: 0;
     margin-bottom: 0;
   }
@@ -166,6 +166,7 @@
   @include desktop {
     width: 525px;
     z-index: 0;
+    bottom: 21px;
   }
 }
 
