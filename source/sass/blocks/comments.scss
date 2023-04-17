@@ -15,9 +15,14 @@
       background-repeat: no-repeat;
       width: 350px;
       height: 100%;
+      background-size: contain;
       left: -50px;
       top: 0;
       z-index: -1;
+
+      @media (min-resolution: 2dpi) {
+        background-image: url("../img/decoration-images/review-back@2x.jpg");
+      }
     }
   }
 
