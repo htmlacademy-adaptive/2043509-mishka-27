@@ -1,0 +1,618 @@
+.order-form {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 17px;
+
+  @include tablet {
+    padding-top: 54px;
+  }
+
+  @include desktop {
+    padding-top: 98px;
+
+    & .container {
+      padding-left: 111px;
+      padding-right: 100px;
+    }
+  }
+}
+
+.order-form__form-field--gray-back {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.order-form__form-field--gray-back::before {
+  @include tablet {
+    position: absolute;
+    content: "";
+    width: 200vw;
+    height: 100%;
+    top: 0;
+    left: -100vw;
+    z-index: -1;
+    background-color: $color-gray-back;
+  }
+}
+
+.order-form__intro {
+  font-family: $font-opensans;
+  color: $color-black-444;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  margin: 0 0 30px 0;
+  max-width: 620px;
+
+  @include tablet {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 13px;
+    max-width: 100%;
+  }
+
+  @include desktop {
+    padding-left: 114px;
+    max-width: 800px;
+  }
+}
+
+.order-form__form {
+  padding-bottom: 55px;
+
+  @include tablet {
+    padding-bottom: 30px;
+  }
+}
+
+.order-form__form-field {
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  @include tablet {
+    padding: 50px 0 50px 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    column-gap: 68px;
+  }
+
+  @include desktop {
+    column-gap: 14px;
+  }
+
+  &--type {
+    padding-bottom: 31px;
+
+    @include tablet {
+      padding-bottom: 50px;
+    }
+
+    @include desktop {
+      padding-bottom: 48px;
+    }
+  }
+
+  &--color {
+    padding-bottom: 33px;
+
+    @include tablet {
+      padding-bottom: 50px;
+    }
+
+    @include desktop {
+      padding-top: 48px;
+      padding-bottom: 52px;
+    }
+  }
+
+  &--phone {
+    padding-bottom: 35px;
+
+    @include tablet {
+      padding-top: 47px;
+      padding-bottom: 12px;
+    }
+
+    @include desktop {
+      max-width: 814px;
+    }
+  }
+
+  &--email {
+    padding-bottom: 35px;
+
+    @include tablet {
+      padding-top: 12px;
+      padding-bottom: 50px;
+    }
+
+    @include desktop {
+      max-width: 814px;
+    }
+  }
+
+  &--add {
+    padding-bottom: 14px;
+
+    @include tablet {
+      padding-bottom: 53px;
+    }
+
+    @include desktop {
+      max-width: 814px;
+      padding-bottom: 48px;
+    }
+  }
+}
+
+.order-form__form-field--person {
+  padding-bottom: 35px;
+
+  & .order-form__list {
+    display: grid;
+    row-gap: 22px;
+  }
+
+  @include tablet {
+    padding-bottom: 50px;
+
+    & .order-form__list {
+      row-gap: 24px;
+    }
+
+    & .order-form__label {
+      flex-direction: row;
+    }
+
+    & .order-form__label-text {
+      margin-right: 25px;
+      padding-top: 16px;
+    }
+  }
+
+  @include desktop {
+    max-width: 814px;
+  }
+}
+
+.order-form__label {
+  position: relative;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  display: flex;
+  width: 100%;
+
+  &:not(:last-child) {
+    .order-form__form-field--person & {
+      margin-bottom: 22px;
+    }
+  }
+
+  @include tablet {
+    font-size: 19px;
+  }
+}
+
+.order-form__input {
+  border: none;
+  box-shadow: inset 0 -2px 0 $color-black-000;
+  width: 100%;
+  padding: 0;
+  font-family: $font-opensans;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+  color: $color-black-444;
+
+  @include tablet {
+    background-color: transparent;
+    font-size: 19px;
+  }
+
+  .order-form__form-field--person & {
+    padding: 17px 0 16px 0;
+
+    @include tablet {
+      padding: 12px 0 14px 18px;
+    }
+  }
+
+  .order-form__form-field--phone & {
+    padding: 14px 0 20px 0;
+
+    @include tablet {
+      padding: 12px 0 16px 16px;
+    }
+  }
+
+  .order-form__form-field--email & {
+    padding: 16px 0 18px 0;
+
+    @include tablet {
+      padding: 12px 0 16px 16px;
+    }
+  }
+
+  &::placeholder {
+    color: rgba($color-black-000, 0.3);
+  }
+
+  &:not(:placeholder-shown) {
+    box-shadow: inset 0 -2px 0 $color-green-basic;
+  }
+
+  &:hover {
+    box-shadow: inset 0 -2px 0 $color-green-basic;
+  }
+}
+
+.order-form__input-img {
+  color: rgba($color-black-000, 0.2);
+  position: absolute;
+
+  .order-form__form-field--phone & {
+    top: 11px;
+    right: 7px;
+
+    @include tablet {
+      top: 14px;
+      right: 27px;
+    }
+
+    @include desktop {
+      right: 8px;
+    }
+  }
+
+  .order-form__form-field--email & {
+    top: 16px;
+    right: 3px;
+
+    @include tablet {
+      top: 17px;
+      right: 22px;
+    }
+
+    @include desktop {
+      right: 4px;
+    }
+  }
+}
+
+.order-form__input:hover + .order-form__input-img {
+  color: $color-green-basic;
+}
+
+.order-form__input:not(:placeholder-shown) + .order-form__input-img {
+  color: $color-green-basic;
+}
+
+.order-form__control:focus {
+  & + .order-form__mark {
+    border-color: $color-green-basic;
+  }
+}
+
+.order-form__control:hover {
+  & + .order-form__mark {
+    border-color: $color-green-basic;
+  }
+}
+
+.order-form__control:active {
+  & + .order-form__mark {
+    border-color: rgba($color-black-000, 0.3);
+  }
+}
+
+.order-form__form-legend {
+  position: relative;
+  text-transform: uppercase;
+  color: $color-green-basic;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  @include tablet {
+    display: flex;
+    transform: translateY(20px);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: calc(100% - 60px);
+    right: 0;
+    top: calc(50% - 1px);
+    background-color: $color-green-basic;
+    padding: 0 0 0 60px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .order-form__form-field--type & {
+    margin-bottom: 30px;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  .order-form__form-field--color & {
+    margin-bottom: 25px;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  .order-form__form-field--person & {
+    margin-bottom: 29px;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  .order-form__form-field--phone & {
+    margin-bottom: 5px;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  .order-form__form-field--email & {
+    margin-bottom: 5px;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  .order-form__form-field--add & {
+    margin-bottom: 21px;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+}
+
+.order-form__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  .order-form__form-field--type & {
+    display: grid;
+    row-gap: 11px;
+
+    @include tablet {
+      row-gap: 24px;
+    }
+  }
+
+  .order-form__form-field--color & {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 260px);
+    row-gap: 23px;
+
+    @include tablet {
+      row-gap: 24px;
+      grid-template-columns: repeat(auto-fit, 233px);
+      column-gap: 28px;
+    }
+
+    @include desktop {
+      column-gap: 30px;
+    }
+  }
+}
+
+.order-form__label--type {
+  position: relative;
+  padding-left: 61px;
+  min-height: 42px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include tablet {
+    padding-left: 78px;
+    min-height: 52px;
+  }
+}
+
+.order-form__label--color {
+  position: relative;
+  padding-left: 61px;
+  min-height: 38px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include tablet {
+    padding-left: 82px;
+    min-height: 52px;
+  }
+}
+
+.order-form__control--radio:checked {
+  & + .order-form__mark--radio::before {
+    display: block;
+  }
+}
+
+.order-form__control--checkbox:checked {
+  & + .order-form__mark--checkbox::before {
+    display: block;
+  }
+}
+
+.order-form__mark {
+  position: absolute;
+  border: 2px solid $color-black-444;
+  left: 0;
+  top: 0;
+}
+
+.order-form__mark--radio {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+
+  @include tablet {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.order-form__mark--radio::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-green-basic;
+  display: none;
+
+  @include tablet {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.order-form__mark--checkbox {
+  width: 38px;
+  height: 38px;
+
+  @include tablet {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.order-form__mark--checkbox::before {
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 16px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/svg/icon-checkbox.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+
+  @include tablet {
+    width: 32px;
+    height: 22px;
+    background-image: url("../img/svg/icon-checkbox-tablet.svg");
+  }
+}
+
+.order-form__label-additional-text {
+  font-family: $font-opensans;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: $color-black-000;
+
+  @include tablet {
+    font-size: 19px;
+  }
+}
+
+.order-form__text-area {
+  font-family: $font-opensans;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+  color: $color-black-000;
+  padding: 17px;
+  border: none;
+  box-shadow: inset 2px 2px 0 $color-black-000,
+    inset -2px -2px 0 $color-black-000;
+  width: 100%;
+  resize: none;
+
+  @include tablet {
+    font-size: 19px;
+  }
+
+  &::placeholder {
+    color: rgba($color-black-000, 0.3);
+  }
+
+  &:not(:placeholder-shown) {
+    box-shadow: inset 2px 2px 0 $color-green-basic,
+      inset -2px -2px 0 $color-green-basic;
+  }
+
+  &:hover {
+    box-shadow: inset 2px 2px 0 $color-green-basic,
+      inset -2px -2px 0 $color-green-basic;
+  }
+}
+
+.order-form__form-button-wrapper {
+  width: 100%;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @include desktop {
+    padding-left: 114px;
+    max-width: 814px;
+  }
+}
+
+.order-form__text-footnote {
+  font-family: $font-opensans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-black-444;
+  margin-bottom: 30px;
+  display: block;
+
+  @include tablet {
+    font-size: 17px;
+    line-height: 30px;
+    order: 2;
+    max-width: 350px;
+    padding-top: 10px;
+  }
+}
+
+.order-form__button-submit {
+  width: 100%;
+  font-size: 17px;
+  line-height: 16px;
+  padding: 18px;
+
+  @include tablet {
+    max-width: 230px;
+  }
+}

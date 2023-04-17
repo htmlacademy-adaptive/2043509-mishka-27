@@ -1,0 +1,142 @@
+.comments {
+  padding: 12px 0 50px 0;
+  background-color: transparent;
+
+  @include tablet {
+    padding-top: 83px;
+    padding-bottom: 95px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("../img/decoration-images/review-back.jpg");
+      background-repeat: no-repeat;
+      width: 350px;
+      height: 100%;
+      background-size: contain;
+      left: -50px;
+      top: 0;
+      z-index: -1;
+
+      @media (min-resolution: 2dpi) {
+        background-image: url("../img/decoration-images/review-back@2x.jpg");
+      }
+    }
+  }
+
+  @include desktop {
+    padding-top: 76px;
+    padding-bottom: 146px;
+    padding-left: calc(16.4%);
+
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+.comments__title {
+  font-family: $font-opensans;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: $color-black-000;
+  margin: 0 0 14px 0;
+
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 37px;
+    max-width: 300px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 35px;
+  }
+}
+
+.comments__slider {
+  margin-bottom: 38px;
+}
+
+.comments__controls {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: inset 0 0 0 1px $color-gray-lines;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: $color-gray-lines;
+    left: 50%;
+  }
+
+  @include tablet {
+    position: absolute;
+    bottom: 134px;
+    right: 0;
+    box-shadow: none;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    bottom: 187px;
+  }
+}
+
+.comments__control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+  padding: 13px 42px 13px 38px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--backward {
+    background-image: url("../img/svg/huge-arrow-left.svg");
+  }
+
+  &--forward {
+    background-image: url("../img/svg/huge-arrow-left.svg");
+    transform: rotate(180deg);
+  }
+
+  @include tablet {
+    padding-right: 49px;
+    padding-left: 38px;
+  }
+}
+
+.comments__button {
+  font-size: 18px;
+
+  @include tablet {
+    position: absolute;
+    font-size: 17px;
+    top: 78px;
+    right: 0;
+    width: 175px;
+  }
+}

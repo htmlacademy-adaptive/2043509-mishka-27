@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Мишка</title>
+  <link rel="preload" href="./fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="./img/svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body class="page-body">
+  <!-- При отключенном js отображается меню мобильной версии в потоке за счет модификатора no-js -->
+  <div class="page-body__header-wrapper">
+    <header class="header-main header-main--not-index no-js">
+      <div class="header-main__logo-wrapper">
+        <a class="header-main__logo" href="index.html" aria-label="Логотип сайта Мишка, переход на главную страницу.">
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1150px)" srcset="./img/svg/logo-desktop.svg">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="./img/svg/logo-tablet.svg">
+            <source type="image/svg+xml" media="(min-width: 320px)" srcset="./img/svg/logo-mobile.svg">
+            <source media="(min-width: 1150px)"
+              srcset="./img/content-images/logo-desktop@1x.png 2x, ./img/content-images/logo-desktop@1x.png 1x">
+            <source media="(min-width: 768px)"
+              srcset="./img/content-images/logo-tablet@1x.png 2x, ./img/content-images/logo-tablet@1x.png 1x">
+            <source media="(min-width: 320px)"
+              srcset="./img/content-images/logo-mobile@1x.png 2x, ./img/content-images/logo-mobile@1x.png 1x">
+            <img class="header-main__logo-image" src="./img/content-images/logo-mobile@1x.png"
+              alt="Логотип сайта Мишка." width="86" height="35">
+          </picture>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper pop-up-menu">
+          <ul class="main-nav__list main-nav__list--main-nav">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="catalog.html">Каталог
+                товаров</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list main-nav__list--site-nav">
+            <li class="main-nav__item  main-nav__item--search">
+              <a class="main-nav__link" href="#" aria-label="Поиск по сайту.">
+                <svg class="main-nav__icon-img" width="18" height="18" role="img" focusable="false">
+                  <use href="./img/svg/sprite.svg#icon-search"></use>
+                </svg>
+                <span class="main-nav__link-text">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--cart">
+              <a class="main-nav__link" href="#" aria-label="Корзина товаров.">
+                <svg class="main-nav__icon-img" width="21" height="18" role="img" focusable="false">
+                  <use href="./img/svg/sprite.svg#icon-cart"></use>
+                </svg>
+                <span class="main-nav__link-text">Корзина: пока пуста</span></a>
+            </li>
+          </ul>
+          <ul class="main-nav__list main-nav__list--customer-nav">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Новые поступления</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Распродажа</a>
+            </li>
+          </ul>
+          <div class="main-nav__delivery">
+            <p class="main-nav__delivery-text">Бесплатная доставка по России</p>
+          </div>
+        </div>
+        <button class="main-nav__toggle main-nav__toggle--close" type="button" aria-label="Открыть/закрыть меню.">
+        </button>
+      </nav>
+    </header>
+  </div>
+  <main>
+    <section class="page-body__catalog-title-wrapper block-decorated block-decorated--white-waves">
+      <h1 class="page-body__catalog-title">Каталог товаров</h1>
+    </section>
+    <section class="catalog container">
+      <h2 class="visually-hidden">Каталог наших товаров.</h2>
+      <ul class="catalog__list">
+        <li class="catalog__item">
+          <a class="catalog__link-image" href="#"
+            aria-label="Открыть страницу товара вязаной игрушки Зайчик-попрыгайчик.">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)"
+                srcset="./img/content-images/knitted-hare-desktop@2x.webp 2x, ./img/content-images/knitted-hare-desktop@1x.webp 1x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="./img/content-images/knitted-hare-tablet@2x.webp 2x, ./img/content-images/knitted-hare-tablet@1x.webp 1x">
+              <source type="image/webp" media="(min-width: 320px)"
+                srcset="./img/content-images/knitted-hare-mobile@2x.webp 2x, ./img/content-images/knitted-hare-mobile@1x.webp 1x">
+              <source media="(min-width: 1150px)"
+                srcset="./img/content-images/knitted-hare-desktop@2x.jpg 2x, ./img/content-images/knitted-hare-desktop@1x.jpg 1x">
+              <source media="(min-width: 768px)"
+                srcset="./img/content-images/knitted-hare-tablet@2x.jpg 2x, ./img/content-images/knitted-hare-tablet@1x.jpg 1x">
+              <source media="(min-width: 320px)"
+                srcset="./img/content-images/knitted-hare-mobile@2x.jpg 2x, ./img/content-images/knitted-hare-mobile@1x.jpg 1x">
+              <img class="catalog__product-image" src="./img/content-images/knitted-hare-mobile@1x.jpg"
+                alt="Вязаная игрушка зайца бежево-голубого цвета." width="260" height="195">
+            </picture>
+          </a>
+          <div class="catalog__product-description">
+            <div class="catalog__info-wrapper">
+              <a class="catalog__link-title" href="#">Зайчик-попрыгайчик</a>
+              <span class="catalog__product-specification">Рост 30&nbsp;см, вес 200&nbsp;г</span>
+            </div>
+            <div class="catalog__price-wrapper">
+              <span class="catalog__product-price">1&nbsp;200&nbsp;руб.</span>
+              <a class="catalog__buy-button modal-button" href="#" aria-label="Кнопка купить.">
+                <svg class="catalog__cart-img" width="20" height="19" role="img" focusable="false">
+                  <use href="./img/svg/sprite.svg#icon-cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__link-image" href="#" aria-label="Открыть страницу товара вязаной корзинки для белья.">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)"
+                srcset="./img/content-images/knitted-laundry-basket-desktop@2x.webp 2x, ./img/content-images/knitted-laundry-basket-desktop@1x.webp 1x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="./img/content-images/knitted-laundry-basket-tablet@2x.webp 2x, ./img/content-images/knitted-laundry-basket-tablet@1x.webp 1x">
+              <source type="image/webp" media="(min-width: 320px)"
+                srcset="./img/content-images/knitted-laundry-basket-mobile@2x.webp 2x, ./img/content-images/knitted-laundry-basket-mobile@1x.webp 1x">
+              <source media="(min-width: 1150px)"
+                srcset="./img/content-images/knitted-laundry-basket-desktop@2x.jpg 2x, ./img/content-images/knitted-laundry-basket-desktop@1x.jpg 1x">
+              <source media="(min-width: 768px)"
+                srcset="./img/content-images/knitted-laundry-basket-tablet@2x.jpg 2x, ./img/content-images/knitted-laundry-basket-tablet@1x.jpg 1x">
+              <source media="(min-width: 320px)"
+                srcset="./img/content-images/knitted-laundry-basket-mobile@2x.jpg 2x, ./img/content-images/knitted-laundry-basket-mobile@1x.jpg 1x">
+              <img class="catalog__product-image" src="./img/content-images/knitted-laundry-basket-mobile@1x.jpg"
+                alt="Вязаная корзинка для белья бежево-розового цвета." width="260" height="195">
+            </picture>
+          </a>
+          <div class="catalog__product-description">
+            <div class="catalog__info-wrapper">
+              <a class="catalog__link-title" href="#">Корзинка для белья</a>
+              <span class="catalog__product-specification">Диаметр 15&nbsp;см, высота 10&nbsp;см</span>
+            </div>
+            <div class="catalog__price-wrapper">
+              <span class="catalog__product-price">690&nbsp;руб.</span>
+              <a class="catalog__buy-button modal-button" href="#" aria-label="Кнопка купить.">
+                <svg class="catalog__cart-img" width="20" height="19" role="img" focusable="false">
+                  <use href="./img/svg/sprite.svg#icon-cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__link-image" href="#" aria-label="Открыть страницу товара вязаной корзинки для игрушек.">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)"
+                srcset="./img/content-images/knitted-toys-basket-desktop@2x.webp 2x, ./img/content-images/knitted-toys-basket-desktop@1x.webp 1x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="./img/content-images/knitted-toys-basket-tablet@2x.webp 2x, ./img/content-images/knitted-toys-basket-tablet@1x.webp 1x">
+              <source type="image/webp" media="(min-width: 320px)"
+                srcset="./img/content-images/knitted-toys-basket-mobile@2x.webp 2x, ./img/content-images/knitted-toys-basket-mobile@1x.webp 1x">
+              <source media="(min-width: 1150px)"
+                srcset="./img/content-images/knitted-toys-basket-desktop@2x.jpg 2x, ./img/content-images/knitted-toys-basket-desktop@1x.jpg 1x">
+              <source media="(min-width: 768px)"
+                srcset="./img/content-images/knitted-toys-basket-tablet@2x.jpg 2x, ./img/content-images/knitted-toys-basket-tablet@1x.jpg 1x">
+              <source media="(min-width: 320px)"
+                srcset="./img/content-images/knitted-toys-basket-mobile@2x.jpg 2x, ./img/content-images/knitted-toys-basket-mobile@1x.jpg 1x">
+              <img class="catalog__product-image" src="./img/content-images/knitted-toys-basket-mobile@1x.jpg"
+                alt="Вязаная большая корзинка для игрушек бежево-салатового цвета." width="260" height="195">
+            </picture>
+          </a>
+          <div class="catalog__product-description">
+            <div class="catalog__info-wrapper">
+              <a class="catalog__link-title" href="#">Большая корзинка для игрушек</a>
+              <span class="catalog__product-specification">Диаметр 30&nbsp;см, высота 30&nbsp;см</span>
+            </div>
+            <div class="catalog__price-wrapper">
+              <span class="catalog__product-price">1&nbsp;500&nbsp;руб.</span>
+              <a class="catalog__buy-button modal-button" href="#" aria-label="Кнопка купить.">
+                <svg class="catalog__cart-img" width="20" height="19" role="img" focusable="false">
+                  <use href="./img/svg/sprite.svg#icon-cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="presentation container">
+      <div class="presentation__wrapper">
+        <h2 class="presentation__title">Процесс производства</h2>
+        <div class="presentation__video-wrapper">
+          <picture class="presentation__video-picture">
+            <source type="image/webp" media="(min-width: 1150px)"
+              srcset="./img/content-images/video-desktop@2x.webp 2x, ./img/content-images/video-desktop@1x.webp 1x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="./img/content-images/video-tablet@2x.webp 2x, ./img/content-images/video-tablet@1x.webp 1x">
+            <source type="image/webp" media="(min-width: 320px)"
+              srcset="./img/content-images/video-mobile@2x.webp 2x, ./img/content-images/video-mobile@1x.webp 1x">
+            <source media="(min-width: 1150px)"
+              srcset="./img/content-images/video-desktop@2x.jpg 2x, ./img/content-images/video-desktop@1x.jpg 1x">
+            <source media="(min-width: 768px)"
+              srcset="./img/content-images/video-tablet@2x.jpg 2x, ./img/content-images/video-tablet@1x.jpg 1x">
+            <source media="(min-width: 320px)"
+              srcset="./img/content-images/video-mobile@2x.jpg 2x, ./img/content-images/video-mobile@1x.jpg 1x">
+            <img class="presentation__video-image" src="./img/content-images/video-mobile@1x.jpg"
+              alt="Вязаная корзинка серо-зелёного цвета." width="260" height="150">
+          </picture>
+          <a class="presentation__play-button" href="#" aria-label="Воспроизвести видео.">
+            <svg class="presentation__play-button-img" width="101" height="77" role="img" focusable="false">
+              <use href="./img/svg/sprite.svg#icon-play-button"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="presentation__text-wrapper">
+          <p class="presentation__subtitle">По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное
+            видео
+            о&nbsp;том, как появляются наши товары.
+          </p>
+          <a class="presentation__button button" href="form.html">Сделать заказ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="main-footer__wrapper container">
+      <a class="main-footer__logo" href="index.html">
+        <svg class="main-footer__logo-img" width="101" height="34" role="img" focusable="false"
+          aria-label="Перейти на главную страницу.">
+          <use href="./img/svg/sprite.svg#logo-footer"></use>
+        </svg>
+      </a>
+      <div class="main-footer__socials">
+        <ul class="socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy" target="_blank"
+              aria-label="Мы в Вконтакте.">
+              <svg width="28" height="22" role="img" focusable="false">
+                <use href="./img/svg/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
+              target="_blank" aria-label="Мы в Ютьюб.">
+              <svg width="28" height="22" role="img" focusable="false">
+                <use href="./img/svg/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--telegram" href="https://t.me/s/htmlacademy" target="_blank"
+              aria-label="Мы в Телеграм.">
+              <svg width="28" height="22" role="img" focusable="false">
+                <use href="./img/svg/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a class="main-footer__copyrights" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+        aria-label="На сайт HTML-academy.">
+        <span class="main-footer__copyrights-text">Разработано</span>
+        <svg class="main-footer__copyrights-logo-img" width="27" height="34" role="img" focusable="false">
+          <use href="./img/svg/sprite.svg#htmlacademy-logo"></use>
+        </svg>
+      </a>
+    </div>
+  </footer>
+  <div class="modal">
+    <div class="modal__content">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+        <h3 class="modal__subtitle">Выберите размер:</h3>
+        <fieldset class="modal__form-field">
+          <label class="modal__form-control">
+            <input class="modal__form-input visually-hidden" type="radio" name="size" value="small"
+              aria-label="Размер маленький." checked>
+            <span class="modal__form-control-mark">s</span>
+          </label>
+          <label class="modal__form-control">
+            <input class="modal__form-input visually-hidden" type="radio" name="size" value="medium"
+              aria-label="Размер средний.">
+            <span class="modal__form-control-mark">m</span>
+          </label>
+          <label class="modal__form-control">
+            <input class="modal__form-input visually-hidden" type="radio" name="size" value="large"
+              aria-label="Размер большой.">
+            <span class="modal__form-control-mark">l</span>
+          </label>
+        </fieldset>
+        <button class="modal__button button" type="submit">Добавить</button>
+      </form>
+    </div>
+  </div>
+  <script src="./js/index.js"></script>
+  <script src="./js/modal.js"></script>
+</body>
+
+</html>
