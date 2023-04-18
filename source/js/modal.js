@@ -1,19 +1,19 @@
 // Открытие/закрытие модального окна
 
-const modalButtons = document.querySelectorAll('.modal-button');
-const modal = document.querySelector('.modal');
-const modalCloseButton = document.querySelector('.modal__button');
-const modalFormInput = document.querySelector('.modal__form-input');
+const modalButtons = document.querySelectorAll(".modal-button");
+const modal = document.querySelector(".modal");
+const modalCloseButton = document.querySelector(".modal__button");
+const modalFormInput = document.querySelector(".modal__form-input");
 
 const onModalButtonClick = (evt) => {
   evt.preventDefault();
-  modal.classList.add('is-open');
+  modal.classList.add("is-open");
   modalFormInput.focus();
 };
 
 const onModalCloseButtonClick = (evt) => {
   evt.preventDefault();
-  modal.classList.remove('is-open');
+  modal.classList.remove("is-open");
 };
 
 const onModalClick = (evt) => {
@@ -23,13 +23,13 @@ const onModalClick = (evt) => {
 };
 
 const onDocumentKeydown = (evt) => {
-  if (evt.key === 'Escape') {
+  if (evt.key === "Escape") {
     evt.preventDefault();
-    modal.classList.remove('is-open');
+    modal.classList.remove("is-open");
   }
 };
 
-modalButtons.forEach((button) => button.addEventListener('click', onModalButtonClick));
-modalCloseButton.addEventListener('click', onModalCloseButtonClick);
-modal.addEventListener('click', onModalClick);
-document.addEventListener('keydown', onDocumentKeydown);
+modalButtons.forEach((button) => button.addEventListener("click", onModalButtonClick));
+modalCloseButton.addEventListener("click", onModalCloseButtonClick);
+modal.addEventListener("click", onModalClick);
+document.addEventListener("keydown", onDocumentKeydown);

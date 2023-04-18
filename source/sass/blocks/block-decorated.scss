@@ -49,3 +49,11 @@
     }
   }
 }
+
+.block-decorated--white-waves-index {
+  @include desktop {
+    &::after {
+      transform: scaleX(1.09);
+    }
+  }
+}
