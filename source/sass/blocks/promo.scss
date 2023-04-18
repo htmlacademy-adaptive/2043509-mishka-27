@@ -77,6 +77,10 @@
 .promo__categories-item {
   position: relative;
 
+  &:first-child {
+    background-color: $color-green-basic;
+  }
+
   &:nth-child(2n) {
     background-color: #56c3b2;
   }
@@ -92,6 +96,10 @@
 
     &:nth-child(4n + 2) {
       background-color: #56c3b2;
+    }
+
+    &:nth-child(4n + 1) {
+      background-color: $color-green-basic;
     }
 
     &:nth-child(4n - 1) {
@@ -112,6 +120,7 @@
   text-decoration: none;
   color: #149080;
   transition: all 0.3s ease;
+  background-color: inherit;
 
   @include tablet {
     font-size: 20px;
@@ -159,7 +168,7 @@
 }
 
 .promo__categories-link:hover {
-  transform: scaleY(1.05) translateY(-5px);
+  transform: scaleY(1.05) translateY(-3px);
 
   & .promo__categories-img {
     opacity: 0.7;

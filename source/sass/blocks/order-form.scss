@@ -311,6 +311,28 @@
   }
 }
 
+.order-form__control--checkbox:disabled,
+.order-form__control--radio:disabled {
+  pointer-events: none;
+
+  & + .order-form__mark {
+    opacity: 0.3;
+  }
+
+  & ~ .order-form__label-additional-text {
+    opacity: 0.3;
+  }
+}
+
+.order-form__control--checkbox:disabled:hover,
+.order-form__control--radio:disabled:hover {
+  pointer-events: none;
+
+  & + .order-form__mark {
+    border-color: rgba($color-black-000, 0.7);
+  }
+}
+
 .order-form__form-legend {
   position: relative;
   text-transform: uppercase;

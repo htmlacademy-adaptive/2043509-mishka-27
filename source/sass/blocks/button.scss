@@ -28,6 +28,7 @@
   }
 
   &:active {
+    background-color: $color-black-444;
     color: rgba($color-white, 0.3);
   }
 }

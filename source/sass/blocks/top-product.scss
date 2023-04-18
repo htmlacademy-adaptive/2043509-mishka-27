@@ -136,15 +136,27 @@
 .top-product__details-wrapper {
   display: grid;
   grid-template-columns: 97px 1fr;
-  padding-bottom: 9px;
+  padding-bottom: 11px;
+  padding-top: 2px;
   border-bottom: 1px solid $color-gray-lines;
 
   @include desktop {
-    padding-bottom: 11px;
+    padding-bottom: 13px;
   }
 }
 
+.top-product__details-parameter {
+  font-family: $font-opensans;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+
 .top-product__details-value {
+  font-family: $font-opensans;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
   margin: 0;
 }
 
